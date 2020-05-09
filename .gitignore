@@ -45,5 +45,10 @@ tests/cache/*
 tests/error.log
 system/templates/testing/*
 
+# fb added
 *.pyc
 vendor/*
+!user/themes/cgre
+user/themes/cgre/fonts/*
+!user/themes/cgre/fonts/.*
+config.codekit3

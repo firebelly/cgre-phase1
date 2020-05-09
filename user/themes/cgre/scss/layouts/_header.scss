@@ -1,0 +1,71 @@
+// Nav
+
+#hamburger-salad {
+}
+
+.header {
+  .container {
+    z-index: z(header);
+    // position: fixed;
+  }
+  .logo {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  @include media-md {
+    height: grid(10);
+  }
+}
+// Primary nav container
+.nav-main {
+  @include clearfix;
+
+  // "Menu" and "Close" text styles
+  @include h4;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+
+  // Desktop styles
+  @include media-md {
+    ul {
+      li {
+        display: inline-block;
+        margin-right: grid(3);
+      }
+    }
+  }
+
+  // Second desktop breakpoint
+  @include media-nav {
+  }
+
+}
+
+// Nav is stuck
+body.nav-stuck {
+  padding-top: 74px;
+  .nav-main {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 4px 0;
+  }
+
+  @include media-md {
+  }
+}
+
+// Nav is open for hambusiness
+body.nav-open {
+  #hamburger-salad {
+    opacity: 0;
+  }
+  .nav-main {
+    .site-nav {
+      transform: translateX(0);
+    }
+  }
+}

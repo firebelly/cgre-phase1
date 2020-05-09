@@ -1,0 +1,88 @@
+{% set theme_config = attribute(config.themes, config.system.pages.theme) %}
+<!DOCTYPE html>
+<html lang="{{ grav.language.getActive ?: grav.config.site.default_lang }}">
+<head>
+{% block head %}
+    <meta charset="utf-8" />
+    <title>{% if header.title %}{{ header.title|e('html') }} | {% endif %}{{ site.title|e('html') }}</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% include 'partials/metadata.html.twig' %}
+
+    <link rel="icon" type="image/png" href="{{ url('theme://images/logo.png') }}" />
+    <link rel="canonical" href="{{ page.url(true, true) }}" />
+{% endblock head %}
+
+{% block stylesheets %}
+    {% do assets.addCss('theme://css/main.css', 98) %}
+{% endblock %}
+
+{% block javascripts %}
+    {% do assets.addJs('jquery', 100) %}
+{% endblock %}
+
+{% block assets deferred %}
+    {{ assets.css()|raw }}
+    {{ assets.js()|raw }}
+{% endblock %}
+</head>
+<body id="top" class="{{ page.header.body_classes }}">
+
+{% block header %}
+    <div class="header">
+        <div class="container">
+            {% block header_navigation %}
+            <nav class="nav-main">
+                <ul>
+                  <li><a href="#mission">Mission</a></li>
+                  <li><a href="#focus-areas">Focus Areas</a></li>
+                  <li><a href="#values">Values</a></li>
+                  <li><a href="#leadership">Leadership</a></li>
+                  <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            {% endblock %}
+            <a class="logo" href="{{ home_url }}">
+                <img src="/user/themes/cgre/images/logo.svg" alt="">
+            </a>
+        </div>
+    </div>
+{% endblock %}
+
+{% block body %}
+    <section id="body">
+    {% block content %}{% endblock %}
+    </section>
+{% endblock %}
+
+{% block footer %}
+    <footer>
+        <div class="block contact">
+            <h4>contacts</h4>
+            —
+            <p>
+                123 Street Name<br>
+                City, State 60608<br>
+                630.123.4567<br>
+                <a href="mailto:info@cgre.org">info@cgre.org</a>
+            </p>
+        </div>
+        <div class="block newsletter">
+            <h4>newsletter</h4>
+            —
+            <form action="">
+                <input type="text">
+                <button>Submit</button>
+            </form>
+            <p><a href="/privacy">Privacy &rarr;</a></p>
+        </div>
+    </footer>
+{% endblock %}
+
+{% block bottom %}
+    {{ assets.js('bottom')|raw }}
+{% endblock %}
+
+</body>
+</html>

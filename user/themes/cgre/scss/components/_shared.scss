@@ -1,0 +1,60 @@
+// Shared components
+
+// Wrappers around buttons
+.actions {
+  padding: grid(2) 0;
+}
+
+// Image reveals
+.-reveal {
+  opacity: 0;
+  transform: translate3d(0,50%,0);
+  transition: transform 1.25s $cubic-ease2, opacity 0.5s $cubic-ease2;
+
+  @include media-md {
+    transform: translate3d(0,100%,0);
+  }
+
+  &.-active {
+    opacity: 1;
+    transform: translate3d(0,0,0);
+  }
+}
+
+// Flash notices
+.flash {
+  padding: 10px;
+  // color: color(blue);
+  // background: color(white);
+  text-align: center;
+  padding: 20px 0;
+  margin: grid(4) 0;
+}
+
+// Color image treatment
+// .color-massage {
+//   display: inline-block;
+//   position: relative;
+//   img {
+//     display: block;
+//   }
+//   .hands {
+//     &::before,
+//     &::after {
+//       content: '';
+//       position: absolute;
+//       top: 0;
+//       left: 0;
+//       right: 0;
+//       bottom: 0;
+//     }
+//     &::before {
+//       background: #1A1A1A;
+//       mix-blend-mode: lighten;
+//     }
+//     &::after {
+//       background: rgba(235, 229, 208, 0.50);
+//       mix-blend-mode: multiply;
+//     }
+//   }
+// }
