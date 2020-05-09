@@ -52,3 +52,4 @@ vendor/*
 user/themes/cgre/fonts/*
 !user/themes/cgre/fonts/.*
 config.codekit3
+*.map
