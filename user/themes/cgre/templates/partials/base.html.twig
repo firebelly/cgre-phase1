@@ -44,7 +44,7 @@
             </nav>
             {% endblock %}
             <a class="logo" href="{{ home_url }}">
-                <img src="/user/themes/cgre/images/logo.svg" alt="">
+                <img src="/user/themes/cgre/images/cgre-logo.svg" alt="CGRE logo">
             </a>
         </div>
     </div>
@@ -58,24 +58,31 @@
 
 {% block footer %}
     <footer>
-        <div class="block contact">
-            <h4>contacts</h4>
-            —
-            <p>
-                123 Street Name<br>
-                City, State 60608<br>
-                630.123.4567<br>
-                <a href="mailto:info@cgre.org">info@cgre.org</a>
-            </p>
-        </div>
-        <div class="block newsletter">
-            <h4>newsletter</h4>
-            —
-            <form action="">
-                <input type="text">
-                <button>Submit</button>
-            </form>
-            <p><a href="/privacy">Privacy &rarr;</a></p>
+        <div class="container">
+            <div class="logo">
+                <div class="divot"></div>
+                <img src="/user/themes/cgre/images/cgre-logo-left-aligned.svg" alt="CGRE logo">
+            </div>
+            <div class="block contact">
+                <h4 class="divot">contacts</h4>
+                <p>
+                    123 Street Name<br>
+                    City, State 60608<br>
+                    <br>
+                    630.123.4567<br>
+                    <a href="mailto:info@cgre.org">info@cgre.org</a>
+                </p>
+            </div>
+            <div class="block newsletter">
+                <h4 class="divot">newsletter</h4>
+                <form action="">
+                    <input type="email" name="email">
+                    <button class="button">Submit</button>
+                </form>
+                <p>
+                    <a href="/privacy">Privacy Policy &rarr;</a>
+                </p>
+            </div>
         </div>
     </footer>
 {% endblock %}

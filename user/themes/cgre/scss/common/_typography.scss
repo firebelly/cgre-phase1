@@ -139,13 +139,24 @@ $font-mono: monospace;
 
 @mixin p3 {
  @include font-regular;
- font-size: 12px;
- line-height: 18px;
+ font-size: 16px;
+ line-height: 20px;
  letter-spacing: -0.02em;
 }
 %p3,
 .p3 {
   @include p3;
+}
+
+@mixin p4 {
+ @include font-regular;
+ font-size: 12px;
+ line-height: 18px;
+ letter-spacing: -0.02em;
+}
+%p4,
+.p4 {
+  @include p4;
 }
 
 // Global header styles

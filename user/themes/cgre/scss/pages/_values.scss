@@ -14,11 +14,21 @@
   }
   .image-wrap {
     width: columns(4);
-    margin: grid(20) 0 0 columns(1);
+    margin: grid(10) 0 0 columns(1);
     float: right;
     .staggered-image {
       position: relative;
       z-index: z(image-front);
+    }
+    .staggered-image:nth-child(2) {
+      width: columns(3, 4);
+      margin-top: grid(-12);
+      margin-left: columns(-1, 4);
+    }
+    svg {
+      left: columns(1.25, 4);
+      top: auto;
+      bottom: grid(-12);
     }
   }
   .body-wrap {

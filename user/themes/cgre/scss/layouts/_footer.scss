@@ -1,168 +1,71 @@
 // Footer
 
-// Footer outro
-.footer-outro {
-  position: relative;
-  padding: grid(10) 0;
-
-  // No image slashes in footer-outro
-  .sprite-slash {
-    display: none;
-  }
-
+footer {
+  @include clearfix;
+  background: color(darkgray);
+  color: color(lightgray);
   p {
-    @include p2;
+    @include p3;
+    font-size: 14px;
   }
-  .text-wrap {
-    padding: grid(6) 0 0;
-  }
-
-  // Footer-specific CTA styles
-  .block-cta {
-    @include media-md {
-      padding-bottom: 0;
-    }
-  }
-
-  // Mobile only styles
-  @include max-screen($breakpoint-md) {
-    .grid {
-      display: flex;
-      flex-direction: column;
-    }
-    .grid-item {
-      flex: 0 1 100%;
-    }
-    .image-wrap {
-      order: 1;
-    }
-    .text-wrap {
-      order: 2;
-    }
-    .block-cta {
-      padding: grid(6) 0;
+  h4.divot {
+    &::after {
+      content: '—';
+      font-weight: normal;
+      display: block;
+      margin: grid(1) 0 grid(2);
     }
   }
 
-  .tape-tagline {
-    right: 65%;
-    top: 60px;
-    transform: rotate(15deg);
+  form {
+    input[type=email] {
+      border: none;
+      border-bottom: 1px solid color(lightgray);
+      padding: grid(1);
+      margin: 0;
+    }
+    button.button {
+      font-size: 14px;
+      padding: grid(1) grid(2);
+      font-weight: normal;
+      vertical-align: bottom;
+    }
+
   }
 
-  // Desktop styles
   @include media-md {
-    padding: grid(16) 0 grid(24);
-    .tape-tagline {
-      transform-origin: left;
-      right: auto;
-      left: grid(-8);
-      top: 96px;
-    }
-    .text-wrap {
-      align-self: flex-end;
-      padding: 0 $global-padding grid(4) 0;
-    }
-    .image-wrap {
-      figure {
-      }
-    }
-  }
-}
-
-// Main footer styles
-footer.site-footer {
-  text-align: center;
-
-  .footer-tagline {
-    text-align: center;
-    padding: grid(8) 0 grid(2);
-  }
-
-  .copyright {
-    text-align: center;
-    padding: grid(6) 0 grid(12);
-  }
-
-  .contact-info {
-    svg.sprite-logo-staggered {
-      width: 120px;
-      height: 78px;
-      margin: grid(6) 0 0;
-    }
-  }
-
-  .footer-blocks {
-    a:not(.logo) {
-      @include slide-link;
-    }
-    ul {
-      font-size: 16px;
-      line-height: 24px;
-      font-weight: bold;
-      li {
-        margin-bottom: grid(2);
-      }
-    }
-  }
-
-  // Mobile-only footer styles
-  @include max-screen($breakpoint-md) {
-    .footer-blocks {
-      display: flex;
-      flex-direction: column;
-      .footer-block {
-        margin: grid(6) 0 0;
-        flex: 0 1 100%;
-      }
-      // Reorder footer blocks
-      .main-nav {
-        order: 1;
-        // Hiding as client thinks mobile footer is too tall
-        display: none;
-      }
-      .secondary-nav {
-        order: 2;
-      }
-      .social-nav {
-        order: 3;
-      }
-      .contact-info {
-        order: 4;
-      }
-    }
-  }
-
-  // Desktop styles
-  @include media-md {
-    text-align: left;
-    .contact-info {
-      svg.sprite-logo-staggered {
-        margin-top: grid(10);
-        width: 168px;
-        height: 109px;
-      }
-    }
-    .footer-tagline {
-      padding: grid(14) 0;
-      h2 {
-        // @include h1;
-      }
-    }
-    .footer-blocks {
-      @include clearfix;
-    }
-    .footer-block {
+    .logo {
+      width: columns(4);
       float: left;
-      width: columns(3);
-      padding-top: grid(15);
-      &:nth-child(1) {
-        padding-top: 0;
-        width: columns(4);
-      }
-      &:nth-child(4) {
-        width: columns(2);
+
+      .divot {
+        display: block;
+        width: columns(1, 4);
+        height: 10px;
+        background: color(pink);
+        margin: grid(1) 0 grid(25);
       }
     }
+
+    .block.contact {
+      width: columns(2);
+      float: left;
+    }
+
+    form {
+      input[type=email] {
+        width: columns(3, 4);
+      }
+    }
+
+    .block.newsletter {
+      width: columns(4);
+      float: left;
+      p {
+        margin-top: grid(3);
+      }
+    }
+
+    padding: grid(10) 0 grid(14);
   }
 }

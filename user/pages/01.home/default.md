@@ -181,38 +181,44 @@ body_classes: page-home
 <div class="page" id="leadership">
   <div class="container">
 
-    <h4>Leadership</h4>
+    <h3 class="divot">Leadership</h3>
 
-    <div class="person">
-      <img src="images/person-1.jpg" alt="">
-      <h4>Firstname Lastname</h4>
-      <p>
-        Cras condimentum iaculis est, sed lorem maximus dui fringilla nec. Quisque egestas scelerisque vulput.
-      </p>
-    </div>
+    <div class="people">
+      <div class="person">
+        <img src="images/person-1.jpg" alt="">
+        <h3>Firstname Lastname</h3>
+        <h3 class="title">Title</h3>
+        <p>
+          Cras condimentum iaculis est, sed lorem maximus dui fringilla nec. Quisque egestas scelerisque vulput.
+        </p>
+      </div>
 
-    <div class="person">
-      <img src="images/person-2.jpg" alt="">
-      <h4>Firstname Lastname</h4>
-      <p>
-        Cras condimentum iaculis est, sed lorem maximus dui fringilla nec. Quisque egestas scelerisque vulput.
-      </p>
-    </div>
+      <div class="person">
+        <img src="images/person-2.jpg" alt="">
+        <h3>Firstname Lastname</h3>
+        <h3 class="title">Title</h3>
+        <p>
+          Cras condimentum iaculis est, sed lorem maximus dui fringilla nec. Quisque egestas scelerisque vulput.
+        </p>
+      </div>
 
-    <div class="person">
-      <img src="images/person-3.jpg" alt="">
-      <h4>Firstname Lastname</h4>
-      <p>
-        Cras condimentum iaculis est, sed lorem maximus dui fringilla nec. Quisque egestas scelerisque vulput.
-      </p>
-    </div>
+      <div class="person">
+        <img src="images/person-3.jpg" alt="">
+        <h3>Firstname Lastname</h3>
+        <h3 class="title">Title</h3>
+        <p>
+          Cras condimentum iaculis est, sed lorem maximus dui fringilla nec. Quisque egestas scelerisque vulput.
+        </p>
+      </div>
 
-    <div class="person">
-      <img src="images/person-4.jpg" alt="">
-      <h4>Firstname Lastname</h4>
-      <p>
-        Cras condimentum iaculis est, sed lorem maximus dui fringilla nec. Quisque egestas scelerisque vulput.
-      </p>
+      <div class="person">
+        <img src="images/person-4.jpg" alt="">
+        <h3>Firstname Lastname</h3>
+        <h3 class="title">Title</h3>
+        <p>
+          Cras condimentum iaculis est, sed lorem maximus dui fringilla nec. Quisque egestas scelerisque vulput.
+        </p>
+      </div>
     </div>
 
   </div>
@@ -221,16 +227,18 @@ body_classes: page-home
 <div class="page" id="contact">
   <div class="container">
 
-    <h4>Contact Us</h4>
-    <h2 class="h1">
-      more info<br>
-      coming in<br>
-      summer<br>
-      2020. in the<br>
-      meantime,<br>
-      say hello.
-    </h2>
+    <h3 class="divot">Contact Us</h3>
+
+    <div class="body-wrap">
+      <h2>
+        more info
+        coming in
+        summer
+        2020. in the
+        meantime,
+        say hello.
+      </h2>
+    </div>
 
   </div>
 </div>
-

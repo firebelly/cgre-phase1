@@ -20,7 +20,6 @@
   // transform-origin: center;
 
   &:hover {
-    transform: rotate(-2deg);
     text-decoration: none;
   }
   &:active {
@@ -37,23 +36,6 @@
   //   }
   // }
 
-  // Hollow buttons
-  &.-hollow {
-    background: none;
-    border: 2px solid color(orange);
-    color: color(orange);
-  }
-  // Jumbo buttons
-  &.-jumbo {
-    @include h4;
-    padding: grid(3) grid(10);
-
-    @include media-md {
-      @include h3;
-      padding: grid(5) grid(10);
-      min-width: columns(4);
-    }
-  }
 
   svg {
     vertical-align: top;
