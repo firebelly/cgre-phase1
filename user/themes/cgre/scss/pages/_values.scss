@@ -1,0 +1,30 @@
+// Values
+
+.page#values {
+
+  h2 {
+    color: color(yellow);
+  }
+
+  svg {
+    position: absolute;
+    left: 0;
+    top: grid(-3);
+    z-index: z(lines-back);
+  }
+  .image-wrap {
+    width: columns(4);
+    margin: grid(20) 0 0 columns(1);
+    float: right;
+    .staggered-image {
+      position: relative;
+      z-index: z(image-front);
+    }
+  }
+  .body-wrap {
+    margin-top: grid(22);
+    width: columns(4);
+    float: left;
+  }
+
+}

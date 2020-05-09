@@ -15,6 +15,7 @@
   }
 
   @include media-md {
+    margin-top: grid(7);
     height: grid(10);
   }
 }

@@ -79,6 +79,7 @@ $font-mono: monospace;
   font-weight: bold;
   font-size: 18px;
   line-height: 20px;
+  margin: 1em 0;
 
   @include media-md {
     font-size: 45px;
@@ -184,7 +185,7 @@ h4 {
 address,
 p,
 figcaption {
-  @include p3;
+  @include p1;
 
   @include media-md {
     @include p2;

@@ -1,0 +1,97 @@
+// Focus Areas
+
+.page#focus-areas {
+
+  background: color(darkgray);
+  color: color(lightgray);
+  h3 {
+    color: color(yellow);
+  }
+  .header-wrap {
+    width: columns(4);
+  }
+
+  @include media-md {
+    padding-bottom: grid(25);
+  }
+
+  .focus-area {
+    @include clearfix;
+    h2 {
+      color: color(yellow);
+    }
+    p {
+      @include p1;
+    }
+    svg {
+      position: absolute;
+    }
+
+    &.-one {
+      svg {
+        left: columns(-1, 4);
+        top: grid(-12);
+        z-index: z(lines-back);
+      }
+      .image-wrap {
+        width: columns(4);
+        margin: grid(20) 0 0 columns(1);
+        float: left;
+        .staggered-image {
+          position: relative;
+          z-index: z(image-front);
+        }
+      }
+      .body-wrap {
+        margin-top: grid(27);
+        width: columns(4);
+        float: right;
+      }
+    }
+
+    &.-two {
+      svg {
+        right: columns(-1, 4);
+        top: grid(-9);
+        z-index: z(lines-back);
+      }
+      .body-wrap {
+        margin-top: grid(32);
+        width: columns(4);
+        float: left;
+      }
+      .image-wrap {
+        width: columns(4);
+        margin: grid(22) columns(1) 0 columns(1);
+        float: right;
+        .staggered-image {
+          position: relative;
+          z-index: z(image-front);
+        }
+      }
+    }
+
+    &.-three {
+      svg {
+        left: columns(-1, 4);
+        bottom: grid(-12);
+        z-index: z(lines-back);
+      }
+      .body-wrap {
+        margin-top: grid(31);
+        width: columns(4);
+        float: right;
+      }
+      .image-wrap {
+        width: columns(4);
+        margin: grid(18) columns(1) 0 columns(1);
+        float: left;
+        .staggered-image {
+          position: relative;
+          z-index: z(image-front);
+        }
+      }
+    }
+  }
+
+}

@@ -1,0 +1,31 @@
+// Mission
+
+.page#mission {
+
+  h3 {
+    color: color(pink);
+  }
+  .image-wrap {
+    margin-bottom: grid(6);
+  }
+  .staggered-image:nth-child(1) {
+    width: columns(7);
+  }
+  .staggered-image:nth-child(2) {
+    width: columns(4);
+    position: absolute;
+    right: 0;
+    bottom: grid(-20);
+  }
+
+  .header-wrap {
+    width: columns(5);
+  }
+
+  .body-wrap {
+    width: columns(4);
+    float: right;
+    margin-top: grid(-5);
+  }
+
+}
