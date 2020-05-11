@@ -474,8 +474,6 @@ th {
 }
 
 .h1, h1 {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   font-weight: normal;
   font-family: "Garnett", sans-serif;
   letter-spacing: -0.02em;
@@ -493,8 +491,6 @@ th {
 }
 
 .h2, h2 {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   font-weight: normal;
   font-family: "Garnett", sans-serif;
   letter-spacing: -0.02em;
@@ -506,8 +502,6 @@ th {
 }
 
 .h3, h3 {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   font-weight: normal;
   font-family: "Garnett", sans-serif;
   letter-spacing: -0.02em;
@@ -527,8 +521,6 @@ th {
 }
 
 .h4, h4 {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   font-weight: normal;
   font-family: "Garnett", sans-serif;
   letter-spacing: -0.02em;
@@ -765,8 +757,6 @@ svg.icon {
 }
 @media screen and (min-width: 768px) {
   .user-content h2 {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
     font-weight: normal;
     font-family: "Garnett", sans-serif;
     letter-spacing: -0.02em;
@@ -902,18 +892,6 @@ svg.icon {
 }
 
 .button {
-  display: inline-block;
-  text-align: center;
-  line-height: 1.4;
-  padding: 20px 30px;
-  position: relative;
-  border: 1px solid #DCD3DE;
-  background: transparent;
-  color: #DCD3DE;
-  align-items: center;
-  text-decoration: none;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   font-weight: normal;
   font-family: "Garnett", sans-serif;
   letter-spacing: -0.02em;
@@ -921,6 +899,17 @@ svg.icon {
   font-weight: bold;
   font-size: 21px;
   line-height: 30px;
+  display: inline-block;
+  text-align: center;
+  line-height: 1.4;
+  padding: 20px 30px;
+  margin: 0;
+  position: relative;
+  border: 1px solid #DCD3DE;
+  background: transparent;
+  color: #DCD3DE;
+  align-items: center;
+  text-decoration: none;
   line-height: 1;
   transition-duration: 0.2s;
   transition-property: transform;
@@ -966,8 +955,6 @@ svg.icon {
 }
 
 form label {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   font-weight: normal;
   font-family: "Garnett", sans-serif;
   letter-spacing: -0.02em;
@@ -983,6 +970,20 @@ form fieldset {
   border: none;
   padding: 0;
   margin: 0;
+}
+@media screen and (min-width: 768px) {
+  form fieldset.-two-column {
+    display: flex;
+    align-items: flex-end;
+    margin: 0 -10px;
+  }
+  form fieldset.-two-column .form-field {
+    flex: 1 1 auto;
+    padding: 0 10px;
+  }
+}
+form .required {
+  display: none;
 }
 form input:-webkit-autofill,
 form input:-webkit-autofill:hover,
@@ -1080,8 +1081,6 @@ form.success .status {
 }
 
 .nav-main {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   font-weight: normal;
   font-family: "Garnett", sans-serif;
   letter-spacing: -0.02em;
@@ -1147,10 +1146,27 @@ footer h4.divot::after {
   margin: 10px 0 20px;
 }
 footer form input[type=email] {
+  font-size: 14px;
+  line-height: 1;
   border: none;
   border-bottom: 1px solid #DEE2DF;
-  padding: 10px;
+  padding: 5px 0;
   margin: 0;
+}
+footer form input[type=email]::-webkit-input-placeholder {
+  color: #DEE2DF;
+}
+footer form input[type=email]::-moz-placeholder {
+  color: #DEE2DF;
+}
+footer form input[type=email]:-ms-input-placeholder {
+  color: #DEE2DF;
+}
+footer form input[type=email]::-ms-input-placeholder {
+  color: #DEE2DF;
+}
+footer form input[type=email]::placeholder {
+  color: #DEE2DF;
 }
 footer form button.button {
   font-size: 14px;
@@ -1177,8 +1193,11 @@ footer form button.button {
     width: 20%;
     float: left;
   }
-  footer form input[type=email] {
-    width: 75%;
+  footer form .form-field:nth-child(1) {
+    flex: 1 1 75%;
+  }
+  footer form .form-field:nth-child(2) {
+    flex: 1 1 25%;
   }
   footer .block.newsletter {
     width: 40%;
@@ -1214,8 +1233,6 @@ body.page-home .staggered-image img {
   clear: both;
 }
 .page h2 {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   font-weight: normal;
   font-family: "Garnett", sans-serif;
   letter-spacing: -0.02em;

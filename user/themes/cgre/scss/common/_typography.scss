@@ -56,7 +56,6 @@
 // Fonts
 $font-sans-serif: 'Garnett', sans-serif;
 $font-sans-serif-alt: 'Central Avenue', serif;
-$font-mono: monospace;
 
 @mixin font-regular {
   font-weight: normal;
@@ -65,14 +64,11 @@ $font-mono: monospace;
   font-kerning: normal;
 }
 @mixin font-header {
-  @include smooth;
+  // @include smooth;
   font-weight: normal;
   font-family: $font-sans-serif;
   letter-spacing: -0.02em;
   margin: 0.5em 0;
-}
-@mixin font-mono {
-  @include smooth;
 }
 @mixin h1 {
   @include font-header;

@@ -13,6 +13,21 @@ form {
     border: none;
     padding: 0;
     margin: 0;
+
+    @include media-md {
+      &.-two-column {
+        display: flex;
+        align-items: flex-end;
+        margin: 0 #{-($gutter / 2)};
+        .form-field {
+          flex: 1 1 auto;
+          padding: 0 $gutter / 2;
+        }
+      }
+    }
+  }
+  .required {
+    display: none;
   }
 
   // Hide autofill styles
