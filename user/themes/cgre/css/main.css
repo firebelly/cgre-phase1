@@ -928,6 +928,10 @@ svg.icon {
   height: 24px;
 }
 
+.page-static #body .container {
+  padding: 40px 0 100px;
+}
+
 .actions {
   padding: 20px 0;
 }
