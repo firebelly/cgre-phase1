@@ -1,0 +1,64 @@
+// Contact
+
+.page#contact {
+
+  h3 {
+    color: color(pink);
+  }
+
+  // SVG along right edge
+  svg.offset {
+    position: absolute;
+    right: 50%;
+    transform: translate(50vw, grid(-6));
+  }
+
+  // SVG below form
+  .svg-bottom-wrap {
+    padding-bottom: grid(20);
+    svg {
+      position: absolute;
+      right: 0;
+      top: calc(100% - #{grid(12)});
+    }
+  }
+
+  // Form buttons
+  .buttons {
+    text-align: right;
+    .button {
+      width: 100%;
+      color: color(darkgray);
+      border: 1px solid color(darkgray);
+      text-align: left;
+      background: transparent url('/user/themes/cgre/images/arrow.svg') 83% 50% no-repeat;
+      transition: background 0.2s ease-out;
+      &:hover {
+        background: color(pink) url('/user/themes/cgre/images/arrow-white.svg') 95% 50% no-repeat;
+        color: color(white);
+      }
+    }
+  }
+
+  @include media-md {
+    // SVG along left edge
+    svg.offset {
+      position: absolute;
+      left: 50%;
+      transform: translate(-50vw, grid(-6));
+    }
+
+    .body-wrap {
+      width: columns(3);
+    }
+    textarea {
+      height: 220px;
+    }
+    .buttons {
+      // Line up submit button with form fields
+      .button {
+        width: calc(50% - #{$gutter / 2});
+      }
+    }
+  }
+}

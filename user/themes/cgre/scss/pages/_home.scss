@@ -49,14 +49,3 @@ body.page-home {
     padding: grid(6) 0 grid(10);
   }
 }
-
-.page#contact {
-  h3 {
-    color: color(pink);
-  }
-  .body-wrap {
-    @include media-md {
-      width: columns(3);
-    }
-  }
-}

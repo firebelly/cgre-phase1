@@ -45,7 +45,7 @@ form {
   textarea {
     @include p1;
     background: none;
-    border: 2px solid color(darkgray);
+    border: 1px solid color(darkgray);
     padding: grid(2);
     &:focus {
       outline: 0;

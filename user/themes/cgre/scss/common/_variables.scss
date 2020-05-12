@@ -37,6 +37,7 @@ $z-layers: (
   image-front: 30,
   lines-front: 40,
   header: 50,
+  nav: 100,
   modal: 1000
 );
 @function z($key) {
