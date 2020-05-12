@@ -5,6 +5,7 @@ const home = {
   init() {
     // JavaScript to be fired on the homepage
 
+    // Nav links scroll to page containers
     document.querySelectorAll('.nav-main a').forEach(el => {
       el.addEventListener('click', e => {
         e.preventDefault();
@@ -18,11 +19,25 @@ const home = {
           let page = document.querySelector(`section.page[data-title="${title}"`);
           // Set state to animating for various checks
           appState.isAnimating = true;
-          zenscroll.intoView(page, 777, () => {
+          zenscroll.intoView(page, 500, () => {
             appState.isAnimating = false;
           });
         }
       });
+    });
+
+    // Logo click scrolls to top of page
+    document.querySelector('.header a.logo').addEventListener('click', e => {
+      e.preventDefault();
+      // Ignore click if already animating
+      if (!appState.isAnimating) {
+        // Set nav item to active state immediately
+        document.querySelectorAll('.nav-main a').forEach(el => { el.classList.remove('active'); })
+        appState.isAnimating = true;
+        zenscroll.toY(0, 500, () => {
+          appState.isAnimating = false;
+        });
+      }
     });
 
     document.querySelector('#contact button[type=submit]').addEventListener('mouseover', e => {
