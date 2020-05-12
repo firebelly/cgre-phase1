@@ -32,7 +32,7 @@
       border: 1px solid color(darkgray);
       text-align: left;
       background: transparent url('/user/themes/cgre/images/arrow.svg') 83% 50% no-repeat;
-      transition: background 0.2s ease-out;
+      @include transition(background);
       &:hover {
         background: color(pink) url('/user/themes/cgre/images/arrow-white.svg') 95% 50% no-repeat;
         color: color(white);

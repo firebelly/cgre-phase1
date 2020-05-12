@@ -17,6 +17,27 @@ footer {
     }
   }
 
+  a.privacy {
+    @include transition(all);
+    padding-bottom: 4px;
+    border-bottom: 1px solid transparent;
+
+    svg {
+      @include transition(all);
+      margin-left: 10px;
+      vertical-align: middle;
+      width: 10px;
+      fill: color(lightgray);
+    }
+
+    &:hover {
+      border-bottom: 1px solid color(pink);
+      svg {
+        fill: color(pink);
+      }
+    }
+  }
+
   form {
     input[type=email] {
       font-size: 14px;
