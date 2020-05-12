@@ -44,11 +44,6 @@ const stickyNav = {
   // Update positions of sticky nav
   update() {
     ticking = false;
-    // If page is animating (set in common.js), unstick nav and return until !isAnimating
-    if (appState.isAnimating) {
-      appState.navStuck = false;
-      return;
-    }
     if (navBottom <= scrollTop && !appState.navStuck) {
       $body.addClass('nav-stuck');
       appState.navStuck = true;
