@@ -11,9 +11,9 @@ git:
         url: https://github.com/getgrav/grav-plugin-markdown-notices
         path: user/plugins/markdown-notices
         branch: master
-    quark:
-        url: https://github.com/getgrav/grav-theme-quark
-        path: user/themes/quark
+    form:
+        url: https://github.com/getgrav/grav-plugin-form
+        path: user/plugins/form
         branch: master
 links:
     problems:
@@ -28,7 +28,7 @@ links:
         src: grav-plugin-markdown-notices
         path: user/plugins/markdown-notices
         scm: github
-    quark:
-        src: grav-theme-quark
-        path: user/themes/quark
+    form:
+        src: grav-plugin-form
+        path: user/plugins/form
         scm: github
