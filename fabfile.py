@@ -14,7 +14,7 @@ def production():
   env.remotepath = '/home/firebelly/webapps/cgre'
   env.git_branch = 'master'
 
-def deploy(composer='y'):
+def deploy(composer = 'y'):
   update()
   if composer == 'y':
     composer_install()
@@ -24,13 +24,13 @@ def clear_cache():
   with cd(env.remotepath):
     run('bin/grav clearcache')
 
-def update():
+def update(initial = 'n'):
   with cd(env.remotepath):
     run('git pull origin {0}'.format(env.git_branch))
-  # upload fonts not in repo
-  put('user/themes/{0}/fonts'.format(env.grav_theme), env.remotepath + '/user/themes/{0}/fonts/'.format(env.grav_theme))
+  # upload items not in repo
+  if initial == 'y':
+    put('user/themes/{0}/fonts'.format(env.grav_theme), env.remotepath + '/user/themes/{0}/fonts/'.format(env.grav_theme))
 
 def composer_install():
   with cd(env.remotepath):
     run('~/bin/composer install')
-    run('bin/gpm update -y')
