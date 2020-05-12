@@ -25,6 +25,13 @@ const home = {
       });
     });
 
+    document.querySelector('#contact button[type=submit]').addEventListener('mouseover', e => {
+      e.target.textContent = 'Let’s Go';
+    });
+    document.querySelector('#contact button[type=submit]').addEventListener('mouseout', e => {
+      e.target.textContent = 'Submit';
+    });
+
   },
 
   finalize() {
