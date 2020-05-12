@@ -21,7 +21,7 @@ title: 'Focus Areas'
     </svg>
 
     <div class="staggered-image">
-      <img src="/images/image-3.jpg" alt="">
+      <img src="/user/images/image-3.jpg" alt="">
     </div>
   </div>
 
@@ -68,7 +68,7 @@ title: 'Focus Areas'
       <rect width="180" height="1" transform="matrix(-1 0 0 1 180 540)" fill="#DEE2DF"/>
     </svg>
     <div class="staggered-image">
-      <img src="/images/image-4.jpg" alt="">
+      <img src="/user/images/image-4.jpg" alt="">
     </div>
   </div>
 
@@ -77,7 +77,7 @@ title: 'Focus Areas'
 <div class="focus-area -three">
   <div class="image-wrap">
     <div class="staggered-image">
-      <img src="/images/image-5.jpg" alt="">
+      <img src="/user/images/image-5.jpg" alt="">
     </div>
     <svg width="290" height="361" viewBox="0 0 290 361" fill="none" xmlns="http://www.w3.org/2000/svg">
       <rect width="290" height="1" fill="#FCAF17"/>

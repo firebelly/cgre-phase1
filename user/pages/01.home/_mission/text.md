@@ -4,10 +4,10 @@ title: 'Mission'
 
 <div class="image-wrap">
   <div class="staggered-image">
-    <img src="/images/image-1.jpg" alt="">
+    <img src="/user/images/image-1.jpg" alt="">
   </div>
   <div class="staggered-image">
-    <img src="/images/image-2.jpg" alt="">
+    <img src="/user/images/image-2.jpg" alt="">
   </div>
 </div>
 

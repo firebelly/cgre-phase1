@@ -6,7 +6,7 @@ title: 'Leadership'
 
 <div class="people">
   <div class="person">
-    <img src="/images/person-1.jpg" alt="">
+    <img src="/user/images/person-1.jpg" alt="">
     <h3>Firstname Lastname</h3>
     <h3 class="title">Title</h3>
     <p>
@@ -15,7 +15,7 @@ title: 'Leadership'
   </div>
 
   <div class="person">
-    <img src="/images/person-2.jpg" alt="">
+    <img src="/user/images/person-2.jpg" alt="">
     <h3>Firstname Lastname</h3>
     <h3 class="title">Title</h3>
     <p>
@@ -24,7 +24,7 @@ title: 'Leadership'
   </div>
 
   <div class="person">
-    <img src="/images/person-3.jpg" alt="">
+    <img src="/user/images/person-3.jpg" alt="">
     <h3>Firstname Lastname</h3>
     <h3 class="title">Title</h3>
     <p>
@@ -33,7 +33,7 @@ title: 'Leadership'
   </div>
 
   <div class="person">
-    <img src="/images/person-4.jpg" alt="">
+    <img src="/user/images/person-4.jpg" alt="">
     <h3>Firstname Lastname</h3>
     <h3 class="title">Title</h3>
     <p>
