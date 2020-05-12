@@ -9,7 +9,7 @@
   {% endblock %}
 
   {% for module in page.collection() %}
-      <section class="page" id="{{ _self.pageLinkName(module.menu)|trim }}">
+      <section class="page" data-title="{{ module.title }}" id="{{ _self.pageLinkName(module.menu)|trim }}">
         <div class="container">
           {{ module.content }}
         </div>

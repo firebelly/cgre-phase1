@@ -1,6 +1,6 @@
 ---
 title: Home
-body_classes: page-home
+body_classes: page-home home
 onpage_menu: true
 content:
     items: @self.modular

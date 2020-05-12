@@ -19,7 +19,7 @@
 {% endblock %}
 
 {% block javascripts %}
-    {% do assets.addJs('jquery', 100) %}
+    {% do assets.addJs('theme://js/main-min.js', {group:'bottom'}) %}
 {% endblock %}
 
 {% block assets deferred %}
@@ -35,11 +35,11 @@
             {% block header_navigation %}
             <nav class="nav-main">
                 <ul>
-                  <li><a href="/#mission">Mission</a></li>
-                  <li><a href="/#focus-areas">Focus Areas</a></li>
-                  <li><a href="/#values">Values</a></li>
-                  <li><a href="/#leadership">Leadership</a></li>
-                  <li><a href="/#contact">Contact</a></li>
+                  <li><a data-title="Mission" href="/#mission"><span data-title="Mission">Mission</span></a></li>
+                  <li><a data-title="Focus Areas" href="/#focus-areas"><span data-title="Focus Areas">Focus Areas</span></a></li>
+                  <li><a data-title="Values" href="/#values"><span data-title="Values">Values</span></a></li>
+                  <li><a data-title="Leadership" href="/#leadership"><span data-title="Leadership">Leadership</span></a></li>
+                  <li><a data-title="Contact" href="/#contact"><span data-title="Contact">Contact</span></a></li>
                 </ul>
             </nav>
             {% endblock %}
