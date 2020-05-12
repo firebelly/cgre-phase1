@@ -9,10 +9,27 @@
     position: absolute;
     right: 0;
     top: 0;
+    width: 354px;
+    height: 103px;
+    img {
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
   }
 
   @include media-md {
     height: grid(10);
+  }
+  .logo-full {
+    @include transition(all);
+  }
+  .logo-small {
+    @include transition(all);
+    transform: translateY(20px);
+    opacity: 0;
+    pointer-events: none;
   }
 }
 
@@ -26,12 +43,19 @@ body.nav-stuck {
     padding: 4px 0;
     z-index: z(nav);
     background: color(tan);
-    .sticky-logo {
-      opacity: 1;
-      transition-duration: 0.2s;
+    // .logo {
+    //   width: 80px;
+    //   height: 32px;
+    // }
+    .logo-full {
+      // transform: scale(0);
+      opacity: 0;
+      transform: translateY(-20px);
     }
-    .donate {
-      display: none;
+    .logo-small {
+      transform: translateY(0);
+      opacity: 1;
+      // transform: scale(1);
     }
     @include drop-shadow;
   }
@@ -65,46 +89,52 @@ body.nav-stuck {
   text-transform: uppercase;
   a {
     text-align: center;
+    position: relative;
+    &::before,
+    &::after {
+      @include transition(height);
+      content: '';
+      position: absolute;
+      top: -10px;
+      left: 50%;
+      width: 20px;
+      height: 0;
+      background: color(pink);
+      transform: translateX(-50%);
+    }
+    &:after {
+      top: auto;
+      bottom: -10px;
+    }
     span {
       position: relative;
       letter-spacing: 0.1em;
       &::after {
+        @include transition(all);
         top: -6px;
         left: 50%;
         z-index: 1;
-        display: none;
+        // display: none;
         white-space: nowrap;
         position: absolute;
-        letter-spacing: 0.25em;
+        letter-spacing: 0.1em;
         background-color: color(cream);
         content: attr(data-title);
         transform: translateX(-50%);
       }
 
     }
-    position: relative;
     &:hover,
     &:focus,
     &.active {
       span {
         &::after {
-          display: block;
+          letter-spacing: 0.25em;
         }
       }
       &::before,
       &::after {
-        content: '';
-        position: absolute;
-        top: -10px;
-        left: 50%;
-        width: 20px;
         height: 3px;
-        background: color(pink);
-        transform: translateX(-50%);
-      }
-      &:after {
-        top: auto;
-        bottom: -10px;
       }
     }
   }
