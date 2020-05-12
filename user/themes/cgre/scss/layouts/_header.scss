@@ -1,8 +1,5 @@
 // Nav
 
-#hamburger-salad {
-}
-
 .header {
   .container {
     z-index: z(header);
@@ -15,10 +12,49 @@
   }
 
   @include media-md {
-    margin-top: grid(7);
     height: grid(10);
   }
 }
+
+// Nav is stuck
+body.nav-stuck {
+  margin-top: 52px;
+  .header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 4px 0;
+    z-index: z(nav);
+    background: color(tan);
+    .sticky-logo {
+      opacity: 1;
+      transition-duration: 0.2s;
+    }
+    .donate {
+      display: none;
+    }
+    @include drop-shadow;
+  }
+
+  @include media-md {
+    .header {
+      padding: grid(1) 0;
+    }
+  }
+}
+
+// Nav is open for hambusiness
+// body.nav-open {
+//   #hamburger {
+//     opacity: 0;
+//   }
+//   .nav-main {
+//     .site-nav {
+//       transform: translateX(0);
+//     }
+//   }
+// }
+
 // Primary nav container
 .nav-main {
   @include clearfix;
@@ -27,7 +63,51 @@
   @include h4;
   font-size: 12px;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  a {
+    text-align: center;
+    span {
+      position: relative;
+      letter-spacing: 0.1em;
+      &::after {
+        top: -6px;
+        left: 50%;
+        z-index: 1;
+        display: none;
+        white-space: nowrap;
+        position: absolute;
+        letter-spacing: 0.25em;
+        background-color: color(cream);
+        content: attr(data-title);
+        transform: translateX(-50%);
+      }
+
+    }
+    position: relative;
+    &:hover,
+    &:focus,
+    &.active {
+      span {
+        &::after {
+          display: block;
+        }
+      }
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        top: -10px;
+        left: 50%;
+        width: 20px;
+        height: 3px;
+        background: color(pink);
+        transform: translateX(-50%);
+      }
+      &:after {
+        top: auto;
+        bottom: -10px;
+      }
+    }
+  }
 
   // Desktop styles
   @include media-md {
@@ -47,12 +127,15 @@
 
 // Nav is stuck
 body.nav-stuck {
-  padding-top: 74px;
-  .nav-main {
+  padding-top: 170px;
+  .header {
     position: fixed;
+    background: color(cream);
     top: 0;
     width: 100%;
     padding: 4px 0;
+    z-index: z(nav);
+    height: 50px;
   }
 
   @include media-md {
@@ -61,9 +144,6 @@ body.nav-stuck {
 
 // Nav is open for hambusiness
 body.nav-open {
-  #hamburger-salad {
-    opacity: 0;
-  }
   .nav-main {
     .site-nav {
       transform: translateX(0);
