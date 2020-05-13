@@ -19,14 +19,19 @@ footer {
     }
   }
 
+  a {
+    @include transition(all);
+    padding-bottom: 3px;
+    border-bottom: 1px solid transparent;
+    &:hover {
+      border-bottom: 1px solid color(pink);
+    }
+  }
+
   .privacy {
     margin-top: grid(8);
 
     a {
-      @include transition(all);
-      padding-bottom: 4px;
-      border-bottom: 1px solid transparent;
-
       svg {
         @include transition(all);
         margin-left: 10px;
@@ -36,7 +41,6 @@ footer {
       }
 
       &:hover {
-        border-bottom: 1px solid color(pink);
         svg {
           fill: color(pink);
         }
@@ -76,7 +80,7 @@ footer {
         width: 80px;
         height: 10px;
         background: color(pink);
-        margin: grid(1) 0 grid(16);
+        margin: grid(1) 0 grid(13);
       }
     }
 
