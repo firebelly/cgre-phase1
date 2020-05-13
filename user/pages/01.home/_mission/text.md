@@ -4,10 +4,10 @@ title: 'Mission'
 
 <div class="image-wrap">
   <div class="staggered-image">
-    <img class="-reveal" src="/user/images/image-1.jpg" alt="">
+    <img class="-reveal" src="/user/images/cgre-header-back.jpg" alt="Women protesting">
   </div>
   <div class="staggered-image">
-    <img class="-reveal" src="/user/images/image-2.jpg" alt="">
+    <img class="-reveal" src="/user/images/cgre-mother.jpg" alt="Mother and child">
   </div>
 </div>
 

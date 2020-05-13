@@ -23,10 +23,14 @@ title: 'Values'
 
 <div class="image-wrap">
   <div class="staggered-image">
-    <img class="-reveal" src="/user/images/image-6.jpg" alt="">
+    <div class="-wrap">
+      <img class="-reveal" src="/user/images/cgre-innovation.jpg" alt="Woman writing on sticky note">
+    </div>
   </div>
   <div class="staggered-image">
-    <img class="-reveal" src="/user/images/image-7.jpg" alt="">
+    <div class="-wrap">
+      <img class="-reveal" src="/user/images/cgre-courage.jpg" alt="Two women looking courageous">
+    </div>
   </div>
   <svg width="157" height="301" viewBox="0 0 157 301" fill="none" xmlns="http://www.w3.org/2000/svg">
     <rect width="157" height="1" transform="matrix(-1 0 0 1 157 300)" fill="#FCAF17"/>
