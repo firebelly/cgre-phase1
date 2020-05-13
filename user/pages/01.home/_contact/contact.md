@@ -4,7 +4,7 @@ form:
     name: contact-form
     action: /home
     fields:
-        example:
+        contact-fieldset:
             type: fieldset
             classes: 'contact-info -two-column'
             fields:

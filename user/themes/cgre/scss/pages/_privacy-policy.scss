@@ -1,40 +1,28 @@
-// Values
+// Privacy Policy
 
-.page#values {
 
-  h2 {
-    color: color(yellow);
+.page-privacy-policy {
+
+  h1.divot {
+    &::before {
+      content: '';
+      display: block;
+      width: 80px;
+      height: 10px;
+      background: color(pink);
+      margin: grid(1) 0 grid(6);
+    }
+    margin-bottom: grid(8);
   }
 
-  svg {
-    position: absolute;
-    left: 0;
-    top: grid(-3);
-    z-index: z(lines-back);
-  }
-  .image-wrap {
-    width: columns(4);
-    margin: grid(10) 0 0 columns(1);
-    float: right;
-    .staggered-image {
-      position: relative;
-      z-index: z(image-front);
+  #body .container {
+    padding: grid(4) 0 grid(10);
+
+    @include media-md {
+      .body-wrap {
+        padding: 0 columns(1);
+      }
     }
-    .staggered-image:nth-child(2) {
-      width: columns(3, 4);
-      margin-top: grid(-12);
-      margin-left: columns(-1, 4);
-    }
-    svg {
-      left: columns(1.25, 4);
-      top: auto;
-      bottom: grid(-12);
-    }
-  }
-  .body-wrap {
-    margin-top: grid(22);
-    width: columns(4);
-    float: left;
   }
 
 }

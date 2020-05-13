@@ -10,11 +10,9 @@
     }
   }
 
-  // User content gets properly sized h2's (rest of site is h1 sized)
-  @include media-md {
-    h2 {
-      @include h2;
-    }
+  h2 {
+    font-weight: bold;
+    letter-spacing: 0;
   }
 
   a:not(.button) {
@@ -29,7 +27,7 @@
   ol,
   ul {
     @include p2;
-    padding: 0 0 0 2.25em;
+    padding: 0 0 0 3.6em;
     li {
       margin: 0 0 grid(2);
       > ul {
@@ -44,16 +42,18 @@
     border-left: 2px solid color(black);
   }
 
-  // Smaller bullets than "disc" on lists
+  // Custom bullets
   ul li {
     list-style-type: none;
     position: relative;
     &:before {
-      content: '•';
-      color: color(black);
-      display: block;
+      content: '';
+      background: url('/user/themes/cgre/images/bullet.svg');
       position: absolute;
-      left: -1.5em;
+      left: -2em;
+      top: 0.25em;
+      width: 10px;
+      height: 10px;
     }
   }
 

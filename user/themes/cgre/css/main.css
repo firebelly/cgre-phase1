@@ -446,7 +446,7 @@ th {
   font-feature-settings: "kern" 1;
   -webkit-font-kerning: normal;
           font-kerning: normal;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 20px;
   letter-spacing: 0.02em;
 }
@@ -564,7 +564,7 @@ figcaption {
     font-feature-settings: "kern" 1;
     -webkit-font-kerning: normal;
             font-kerning: normal;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 20px;
     letter-spacing: 0.02em;
   }
@@ -764,17 +764,9 @@ svg.icon {
     margin-top: 40px;
   }
 }
-@media screen and (min-width: 768px) {
-  .user-content h2 {
-    font-weight: normal;
-    font-family: "Garnett", sans-serif;
-    letter-spacing: -0.02em;
-    margin: 0.5em 0;
-    font-weight: 300;
-    font-size: 22px;
-    line-height: 30px;
-    letter-spacing: -1.4px;
-  }
+.user-content h2 {
+  font-weight: bold;
+  letter-spacing: 0;
 }
 .user-content a:not(.button) {
   background-image: linear-gradient(to top, #fff 0%, #fff 100%);
@@ -801,10 +793,10 @@ svg.icon {
   font-feature-settings: "kern" 1;
   -webkit-font-kerning: normal;
           font-kerning: normal;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 20px;
   letter-spacing: 0.02em;
-  padding: 0 0 0 2.25em;
+  padding: 0 0 0 3.6em;
 }
 .user-content ol li,
 .user-content ul li {
@@ -824,11 +816,13 @@ svg.icon {
   position: relative;
 }
 .user-content ul li:before {
-  content: "•";
-  color: #000;
-  display: block;
+  content: "";
+  background: url("/user/themes/cgre/images/bullet.svg");
   position: absolute;
-  left: -1.5em;
+  left: -2em;
+  top: 0.25em;
+  width: 10px;
+  height: 10px;
 }
 .user-content hr {
   height: 0;
@@ -935,10 +929,6 @@ svg.icon {
   vertical-align: top;
   width: 24px;
   height: 24px;
-}
-
-.page-static #body .container {
-  padding: 40px 0 100px;
 }
 
 .actions {
@@ -1085,14 +1075,20 @@ form.success .status {
   position: absolute;
   right: 0;
   top: 0;
-  width: 354px;
-  height: 103px;
+  width: 173px;
+  height: 51px;
 }
 .header .logo img {
   display: block;
   position: absolute;
   top: 0;
   right: 0;
+}
+@media screen and (min-width: 768px) {
+  .header .logo {
+    width: 354px;
+    height: 103px;
+  }
 }
 @media screen and (min-width: 768px) {
   .header {
@@ -1256,15 +1252,18 @@ footer h4.divot::after {
   display: block;
   margin: 20px 0;
 }
-footer .privacy {
-  margin-top: 80px;
-}
-footer .privacy a {
+footer a {
   transition-duration: 0.2s;
   transition-property: all;
   transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
-  padding-bottom: 4px;
+  padding-bottom: 3px;
   border-bottom: 1px solid transparent;
+}
+footer a:hover {
+  border-bottom: 1px solid #FC4F60;
+}
+footer .privacy {
+  margin-top: 80px;
 }
 footer .privacy a svg {
   transition-duration: 0.2s;
@@ -1274,9 +1273,6 @@ footer .privacy a svg {
   vertical-align: middle;
   width: 10px;
   fill: #DEE2DF;
-}
-footer .privacy a:hover {
-  border-bottom: 1px solid #FC4F60;
 }
 footer .privacy a:hover svg {
   fill: #FC4F60;
@@ -1323,7 +1319,7 @@ footer form button.button {
     width: 80px;
     height: 10px;
     background: #FC4F60;
-    margin: 10px 0 160px;
+    margin: 10px 0 130px;
   }
   footer .block.contact {
     width: 20%;
@@ -1544,6 +1540,26 @@ body.page-home .staggered-image img {
   float: left;
 }
 
+.page-privacy-policy h1.divot {
+  margin-bottom: 80px;
+}
+.page-privacy-policy h1.divot::before {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 10px;
+  background: #FC4F60;
+  margin: 10px 0 60px;
+}
+.page-privacy-policy #body .container {
+  padding: 40px 0 100px;
+}
+@media screen and (min-width: 768px) {
+  .page-privacy-policy #body .container .body-wrap {
+    padding: 0 10%;
+  }
+}
+
 .page#leadership {
   background: #5759BC;
   color: #DEE2DF;
@@ -1564,7 +1580,7 @@ body.page-home .staggered-image img {
   font-feature-settings: "kern" 1;
   -webkit-font-kerning: normal;
           font-kerning: normal;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 20px;
   letter-spacing: 0.02em;
   font-size: 16px;
