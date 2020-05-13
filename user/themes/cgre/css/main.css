@@ -551,23 +551,9 @@ figcaption {
   font-feature-settings: "kern" 1;
   -webkit-font-kerning: normal;
           font-kerning: normal;
-  font-size: 22px;
-  line-height: 30px;
-  letter-spacing: -0.02em;
-}
-@media screen and (min-width: 768px) {
-  address,
-p,
-figcaption {
-    font-weight: normal;
-    font-family: "Garnett", sans-serif;
-    font-feature-settings: "kern" 1;
-    -webkit-font-kerning: normal;
-            font-kerning: normal;
-    font-size: 16px;
-    line-height: 20px;
-    letter-spacing: 0.02em;
-  }
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.02em;
 }
 
 .row:after {
@@ -761,12 +747,20 @@ svg.icon {
 }
 @media screen and (min-width: 768px) {
   .user-content * + * {
-    margin-top: 40px;
+    margin-top: 30px;
   }
 }
 .user-content h2 {
   font-weight: bold;
   letter-spacing: 0;
+}
+.user-content h2 + p {
+  margin-top: 10px;
+}
+@media screen and (min-width: 768px) {
+  .user-content h2 + p {
+    margin-top: 20px;
+  }
 }
 .user-content a:not(.button) {
   background-image: linear-gradient(to top, #fff 0%, #fff 100%);

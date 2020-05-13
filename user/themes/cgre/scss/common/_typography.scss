@@ -192,9 +192,5 @@ h4 {
 address,
 p,
 figcaption {
-  @include p1;
-
-  @include media-md {
-    @include p2;
-  }
+  @include p2;
 }
