@@ -14,7 +14,7 @@ title: 'Mission'
 <div class="wrap">
   <div class="header-wrap">
     <h3 class="divot">Our Mission</h3>
-    <h2 class="h1">mobilizing funders to support the movement for gender + reproductive equity</h2>
+    <h2 class="h1">mobilizing funders to support gender + reproductive equity</h2>
   </div>
 
   <div class="body-wrap">
