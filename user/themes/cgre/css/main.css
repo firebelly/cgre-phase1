@@ -1573,6 +1573,14 @@ body.page-home .staggered-image img {
   .page#leadership {
     padding-top: 280px;
   }
+  .page#leadership svg {
+    position: absolute;
+    top: -250px;
+    left: 0;
+  }
+  .page#leadership svg.-bottom {
+    top: 80px;
+  }
   .page#leadership .people {
     padding: 50px 0 120px 20%;
   }

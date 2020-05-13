@@ -25,6 +25,15 @@
   @include media-md {
     padding-top: grid(28);
 
+    svg {
+      position: absolute;
+      top: grid(-25);
+      left: 0;
+    }
+    svg.-bottom {
+      top: grid(8);
+    }
+
     .people {
       padding: grid(5) 0 grid(12) columns(2);
       .person {
