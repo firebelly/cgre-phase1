@@ -4,36 +4,42 @@ footer {
   @include clearfix;
   background: color(darkgray);
   color: color(lightgray);
+
   p {
     @include p3;
     font-size: 14px;
   }
+
   h4.divot {
     &::after {
       content: '—';
       font-weight: normal;
       display: block;
-      margin: grid(1) 0 grid(2);
+      margin: grid(2) 0;
     }
   }
 
-  a.privacy {
-    @include transition(all);
-    padding-bottom: 4px;
-    border-bottom: 1px solid transparent;
+  .privacy {
+    margin-top: grid(8);
 
-    svg {
+    a {
       @include transition(all);
-      margin-left: 10px;
-      vertical-align: middle;
-      width: 10px;
-      fill: color(lightgray);
-    }
+      padding-bottom: 4px;
+      border-bottom: 1px solid transparent;
 
-    &:hover {
-      border-bottom: 1px solid color(pink);
       svg {
-        fill: color(pink);
+        @include transition(all);
+        margin-left: 10px;
+        vertical-align: middle;
+        width: 10px;
+        fill: color(lightgray);
+      }
+
+      &:hover {
+        border-bottom: 1px solid color(pink);
+        svg {
+          fill: color(pink);
+        }
       }
     }
   }
@@ -59,6 +65,7 @@ footer {
 
   }
 
+  // Desktop styles
   @include media-md {
     .logo {
       width: columns(8);
@@ -66,10 +73,10 @@ footer {
 
       .divot {
         display: block;
-        width: columns(1, 4);
+        width: 80px;
         height: 10px;
         background: color(pink);
-        margin: grid(1) 0 grid(25);
+        margin: grid(1) 0 grid(16);
       }
     }
 
@@ -87,15 +94,11 @@ footer {
       }
     }
 
-    p {
-      margin-top: grid(3);
-    }
-
     .block.newsletter {
       width: columns(4);
       float: right;
     }
 
-    padding: grid(10) 0 grid(14);
+    padding: grid(10) 0 grid(20);
   }
 }
