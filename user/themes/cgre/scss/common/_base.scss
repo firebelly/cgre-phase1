@@ -11,6 +11,8 @@ html {
 //   overflow-x: hidden;
 // }
 
+body, .smooth-container { scroll-behavior: smooth }
+
 body {
   background: color(cream);
   color: color(darkgray);

@@ -643,6 +643,10 @@ html {
   box-sizing: border-box;
 }
 
+body, .smooth-container {
+  scroll-behavior: smooth;
+}
+
 body {
   background: #F6F8F3;
   color: #004450;
@@ -1308,7 +1312,7 @@ footer form button.button {
     padding: 100px 0 140px;
   }
   footer .logo {
-    width: 40%;
+    width: 80%;
     float: left;
   }
   footer .logo .divot {
@@ -1328,12 +1332,12 @@ footer form button.button {
   footer form .form-field:nth-child(2) {
     flex: 1 1 25%;
   }
+  footer p {
+    margin-top: 30px;
+  }
   footer .block.newsletter {
     width: 40%;
-    float: left;
-  }
-  footer .block.newsletter p {
-    margin-top: 30px;
+    float: right;
   }
 }
 
@@ -1593,6 +1597,12 @@ body.page-home .staggered-image img {
   position: absolute;
   right: 0;
   top: calc(100% - 120px);
+}
+@media screen and (min-width: 768px) {
+  .page#contact .svg-bottom-wrap svg {
+    width: 20%;
+    height: auto;
+  }
 }
 .page#contact .buttons {
   text-align: right;

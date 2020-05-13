@@ -61,7 +61,7 @@ footer {
 
   @include media-md {
     .logo {
-      width: columns(4);
+      width: columns(8);
       float: left;
 
       .divot {
@@ -87,12 +87,13 @@ footer {
       }
     }
 
+    p {
+      margin-top: grid(3);
+    }
+
     .block.newsletter {
       width: columns(4);
-      float: left;
-      p {
-        margin-top: grid(3);
-      }
+      float: right;
     }
 
     padding: grid(10) 0 grid(14);

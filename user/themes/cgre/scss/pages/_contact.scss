@@ -21,6 +21,12 @@
       right: 0;
       top: calc(100% - #{grid(12)});
     }
+    @include media-md {
+      svg {
+        width: columns(2);
+        height: auto;
+      }
+    }
   }
 
   // Form buttons
