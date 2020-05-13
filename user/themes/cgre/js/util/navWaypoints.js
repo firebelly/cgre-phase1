@@ -38,7 +38,7 @@ const navWaypoints = {
     let currentPage = '';
     // Find current sticky section title based on scroll position
     pages.forEach(el => {
-      if (el.offsetTop - 10 <= scrollTop) {
+      if (el.getBoundingClientRect().top + window.scrollY - 10 <= scrollTop) {
         currentPage = el.getAttribute('data-title');
       }
     });
