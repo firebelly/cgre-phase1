@@ -5,6 +5,7 @@ import Router from './util/Router';
 import appState from './util/appState';
 import stickyNav from './util/stickyNav';
 import navWaypoints from './util/navWaypoints';
+import imageReveals from './util/imageReveals';
 
 import common from './routes/common';
 import home from './routes/home';
@@ -25,6 +26,9 @@ stickyNav.init();
 
 // Init nav waypoints
 navWaypoints.init();
+
+// Init image reveals
+imageReveals.init();
 
 // Load Events
 document.addEventListener('DOMContentLoaded', () => routes.loadEvents());

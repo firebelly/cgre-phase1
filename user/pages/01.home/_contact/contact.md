@@ -72,7 +72,7 @@ form:
   </h2>
 </div>
 
-<svg class="offset" width="70" height="541" viewBox="0 0 70 541" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg class="offset -animate" width="70" height="541" viewBox="0 0 70 541" fill="none" xmlns="http://www.w3.org/2000/svg">
   <rect width="70" height="1" transform="matrix(-1 0 0 1 70 0)" fill="#FC4F60"/>
   <rect width="70" height="1" transform="matrix(-1 0 0 1 70 240)" fill="#FC4F60"/>
   <rect width="70" height="1" transform="matrix(-1 0 0 1 70 120)" fill="#FC4F60"/>

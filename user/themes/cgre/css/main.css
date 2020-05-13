@@ -952,7 +952,7 @@ svg.icon {
 }
 @media screen and (min-width: 768px) {
   .-reveal {
-    transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 30%, 0);
   }
 }
 .-reveal.-active {

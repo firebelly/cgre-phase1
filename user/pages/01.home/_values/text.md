@@ -23,10 +23,10 @@ title: 'Values'
 
 <div class="image-wrap">
   <div class="staggered-image">
-    <img src="/user/images/image-6.jpg" alt="">
+    <img class="-reveal" src="/user/images/image-6.jpg" alt="">
   </div>
   <div class="staggered-image">
-    <img src="/user/images/image-7.jpg" alt="">
+    <img class="-reveal" src="/user/images/image-7.jpg" alt="">
   </div>
   <svg width="157" height="301" viewBox="0 0 157 301" fill="none" xmlns="http://www.w3.org/2000/svg">
     <rect width="157" height="1" transform="matrix(-1 0 0 1 157 300)" fill="#FCAF17"/>
