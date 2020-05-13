@@ -2,8 +2,7 @@
 
 import appState from './appState';
 
-let $pages = [],
-    $nav,
+let pages = [],
     $window,
     scrollTop,
     ticking;
@@ -14,8 +13,7 @@ const navWaypoints = {
   init() {
     if ($('section.page').length) {
       $window = $(window);
-      $nav = $('.nav-main');
-      $pages = $('section.page');
+      pages = document.querySelectorAll('section.page');
 
       $window.off('scroll.navWaypoints').on('scroll.navWaypoints', navWaypoints.scrolling);
       $window.off('resize.navWaypoints').on('resize.navWaypoints', navWaypoints.resizing);
@@ -39,13 +37,19 @@ const navWaypoints = {
     }
     let currentPage = '';
     // Find current sticky section title based on scroll position
-    $pages.each(function(i) {
-      if (this.offsetTop - 10 <= scrollTop) {
-        currentPage = this.getAttribute('data-title');
+    pages.forEach(el => {
+      if (el.offsetTop - 10 <= scrollTop) {
+        currentPage = el.getAttribute('data-title');
       }
     });
-    $nav.find('a').removeClass('active');
-    $nav.find(`a[data-title="${currentPage}"]`).addClass('active');
+    document.querySelectorAll('.nav-main a').forEach(el => {
+      if (el.getAttribute('data-title') == currentPage) {
+        el.classList.add('active');
+      } else {
+        el.classList.remove('active');
+        el.blur();
+      }
+    });
   },
 
   // Scrolling
