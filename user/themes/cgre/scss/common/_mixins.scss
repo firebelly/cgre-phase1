@@ -7,33 +7,13 @@
   transition-timing-function: $transition-easing;
 }
 
-// Animated white bg + black underline hover for nav/footer links
-@mixin slide-link($slide-target:'&') {
-  #{$slide-target} {
-    padding: 0 1px 2px 1px;
-    // background-image: linear-gradient(to bottom, color(white) 94%, color(black) 95%);
-    background-image: linear-gradient(to top, color(black) 2px, color(white) 2px, color(white) 100%);
-    background-repeat: no-repeat;
-    background-size: 0% 100%;
-    @include transition(background-size, color);
-  }
-  &:hover,
-  &:focus {
-    #{$slide-target} {
-      text-decoration: none;
-      background-size: 100% 100%;
-      transition-delay: 0s;
-    }
-  }
-
-}
-
-// Animated white bg hover for user-content links
+// Animated hover for user-content links
 @mixin inline-link($slide-target:'&') {
   #{$slide-target} {
-    background-image: linear-gradient(to top, color(white) 0%, color(white) 100%);
-    background-repeat: no-repeat;
-    background-size: 0% 100%;
+    background-image: linear-gradient(to bottom, color(yellow) 0%, color(yellow) 100%);
+    background-repeat: repeat-x;
+    background-position: 0% 100%;
+    background-size: 0px 0px;
     text-decoration: underline;
     @include transition(background-size);
   }
