@@ -472,7 +472,7 @@ th {
   line-height: 20px;
   margin: 1em 0;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 750px) {
   .h1, h1 {
     font-size: 45px;
     line-height: 50px;
@@ -502,7 +502,7 @@ th {
   font-size: 14px;
   line-height: 20px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 750px) {
   .h3, h3 {
     font-size: 18px;
     line-height: 20px;
@@ -555,7 +555,7 @@ figcaption {
   width: 100%;
   display: block;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 750px) {
   .grid {
     display: flex;
     flex-wrap: wrap;
@@ -585,7 +585,7 @@ figcaption {
   max-width: 66.6666667%;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 750px) {
   .grid-item {
     flex-basis: auto;
   }
@@ -610,17 +610,12 @@ figcaption {
     max-width: 66.6666667%;
   }
 }
-*, *::before, *::after {
-  box-sizing: inherit;
-}
-
 html {
   box-sizing: border-box;
 }
 
-html,
-body {
-  overflow-x: hidden;
+*, *::before, *::after {
+  box-sizing: inherit;
 }
 
 body {
@@ -707,7 +702,7 @@ svg.icon {
     content: "sm";
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 750px) {
   #breakpoint-indicator::after {
     content: "md";
   }
@@ -736,7 +731,7 @@ svg.icon {
 .user-content * + * {
   margin-top: 20px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 750px) {
   .user-content * + * {
     margin-top: 30px;
   }
@@ -748,7 +743,7 @@ svg.icon {
 .user-content h2 + p {
   margin-top: 10px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 750px) {
   .user-content h2 + p {
     margin-top: 20px;
   }
@@ -865,7 +860,7 @@ svg.icon {
 .show-for-medium-up {
   display: none;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 750px) {
   .show-for-medium-up {
     display: block;
   }
@@ -874,7 +869,7 @@ svg.icon {
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 750px) {
   .hide-for-medium-up {
     display: none !important;
   }
@@ -926,7 +921,7 @@ svg.icon {
   transform: translate3d(0, 50%, 0);
   transition: transform 1.25s cubic-bezier(0.165, 0.84, 0.44, 1), opacity 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 750px) {
   .-reveal {
     transform: translate3d(0, 30%, 0);
   }
@@ -960,7 +955,7 @@ form fieldset {
   padding: 0;
   margin: 0;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 750px) {
   form fieldset.-two-column {
     margin: 0 -10px;
   }
@@ -1020,7 +1015,7 @@ form input[type=email]::placeholder,
 form textarea::placeholder {
   color: rgba(0, 68, 80, 0.3);
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 750px) {
   form input[type=text].half,
 form input[type=email].half,
 form textarea.half {
@@ -1382,7 +1377,7 @@ footer form button.button {
   font-weight: normal;
   vertical-align: bottom;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 750px) {
   footer {
     padding: 100px 0 200px;
   }
@@ -1426,7 +1421,7 @@ body.page-home .staggered-image img {
   width: 100%;
   height: auto;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 750px) {
   body.page-home .block-text.-halfWidth {
     clear: left;
   }
@@ -1461,13 +1456,13 @@ body.page-home .staggered-image img {
   margin: 1em 0;
   margin: 10px 0 20px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 750px) {
   .page h2 {
     font-size: 45px;
     line-height: 50px;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 750px) {
   .page h2 {
     margin: 50px 0 50px;
   }
@@ -1482,7 +1477,7 @@ body.page-home .staggered-image img {
   line-height: 20px;
   letter-spacing: -0.02em;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 750px) {
   .page p {
     font-weight: normal;
     font-family: "Garnett", sans-serif;
@@ -1498,7 +1493,7 @@ body.page-home .staggered-image img {
   content: "—";
   display: block;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 750px) {
   .page {
     padding: 60px 0 100px;
   }
@@ -1525,7 +1520,7 @@ body.page-home .staggered-image img {
 .page#mission .body-wrap {
   margin-top: 20px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 750px) {
   .page#mission .image-wrap {
     margin-bottom: 60px;
   }
@@ -1557,7 +1552,7 @@ body.page-home .staggered-image img {
 .page#focus-areas .header-wrap {
   width: 50%;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 750px) {
   .page#focus-areas {
     padding-bottom: 250px;
   }
@@ -1588,7 +1583,7 @@ body.page-home .staggered-image img {
   margin: 20px 0 0 0;
   float: left;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 749px) {
   .page#focus-areas .focus-area.-one svg {
     width: 105px;
   }
@@ -1602,7 +1597,7 @@ body.page-home .staggered-image img {
     clear: left;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 750px) {
   .page#focus-areas .focus-area.-one .image-wrap {
     width: 40%;
     margin: 200px 0 0 10%;
@@ -1622,7 +1617,7 @@ body.page-home .staggered-image img {
   margin: 20px 0 0 0;
   float: right;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 749px) {
   .page#focus-areas .focus-area.-two svg {
     top: -180px;
     width: 65px;
@@ -1637,7 +1632,7 @@ body.page-home .staggered-image img {
     clear: right;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 750px) {
   .page#focus-areas .focus-area.-two .body-wrap {
     margin-top: 320px;
     width: 40%;
@@ -1654,7 +1649,7 @@ body.page-home .staggered-image img {
   margin: 40px 0 0 0;
   float: left;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 749px) {
   .page#focus-areas .focus-area.-three svg {
     left: -25%;
     top: -40px;
@@ -1670,7 +1665,7 @@ body.page-home .staggered-image img {
     clear: left;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 750px) {
   .page#focus-areas .focus-area.-three svg {
     left: -25%;
     bottom: -120px;
@@ -1714,7 +1709,7 @@ body.page-home .staggered-image img {
   left: 30px;
   top: -270px;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 749px) {
   .page#values svg {
     width: 58px;
   }
@@ -1722,7 +1717,7 @@ body.page-home .staggered-image img {
     width: 30%;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 750px) {
   .page#values .image-wrap {
     width: 40%;
     margin: 100px 0 0 10%;
@@ -1761,7 +1756,7 @@ body.page-home .staggered-image img {
 .page-privacy-policy #body .container {
   padding: 40px 0 100px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 750px) {
   .page-privacy-policy #body .container .body-wrap {
     padding: 0 10%;
   }
@@ -1796,7 +1791,7 @@ body.page-home .staggered-image img {
   letter-spacing: 0.02em;
   font-size: 16px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 750px) {
   .page#leadership {
     padding-top: 280px;
   }
@@ -1833,7 +1828,7 @@ body.page-home .staggered-image img {
   right: 0;
   top: calc(100% - 120px);
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 750px) {
   .page#contact .svg-bottom-wrap svg {
     width: 20%;
     height: auto;
@@ -1856,7 +1851,7 @@ body.page-home .staggered-image img {
   background: #FC4F60 url("/user/themes/cgre/images/arrow-white.svg") 95% 50% no-repeat;
   color: #fff;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 750px) {
   .page#contact svg.offset {
     position: absolute;
     left: 50%;
