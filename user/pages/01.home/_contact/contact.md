@@ -28,6 +28,36 @@ form:
                     rule: email
                     required: true
 
+        org-fieldset:
+            type: fieldset
+            classes: 'org-info -two-column'
+            fields:
+                name:
+                  id: organization
+                  label: Organization
+                  classes: form-control form-control-half
+                  placeholder: Enter your organization name
+                  autocomplete: on
+                  type: text
+                  validate:
+                    required: true
+
+                focus:
+                  id: focus
+                  classes: form-control form-control-lg
+                  label: Focus
+                  placeholder: Select Focus...
+                  type: select
+                  size: long
+                  help: 'Testing help'
+                  options:
+                      national: 'National'
+                      state: 'State Level'
+                      both: 'Both'
+
+                  validate:
+                    required: true
+
         message:
           label: Message
           classes: form-control form-control-lg
