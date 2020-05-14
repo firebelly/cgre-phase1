@@ -5,36 +5,65 @@
   h2 {
     color: color(yellow);
   }
-
   svg {
     position: absolute;
-    left: 0;
-    top: grid(-3);
-    z-index: z(lines-back);
   }
   .image-wrap {
     width: columns(4);
-    margin: grid(10) 0 0 columns(1);
+    margin: grid(-23) 0 0 columns(1);
     float: right;
-    .staggered-image {
-      position: relative;
-      z-index: z(image-front);
-    }
     .staggered-image:nth-child(2) {
       width: columns(3, 4);
-      margin-top: grid(-12);
+      margin-top: grid(-5);
       margin-left: columns(-1, 4);
     }
     svg {
       left: columns(1.25, 4);
-      top: auto;
       bottom: grid(-12);
     }
   }
   .body-wrap {
+    svg {
+      position: absolute;
+      left: $mobile-global-padding;
+      top: grid(-27);
+    }
     margin-top: grid(22);
-    width: columns(4);
-    float: left;
   }
 
+  // Mobile only styles
+  @include max-screen($breakpoint-md) {
+    svg {
+      width: 58px;
+    }
+    .headers {
+      width: columns(3);
+    }
+  }
+
+  // Desktop styles
+  @include media-md {
+    .image-wrap {
+      width: columns(4);
+      margin: grid(10) 0 0 columns(1);
+      .staggered-image:nth-child(2) {
+        width: columns(3, 4);
+        margin-top: grid(-12);
+        margin-left: columns(-1, 4);
+      }
+      svg {
+        left: columns(1.25, 4);
+        bottom: grid(-12);
+      }
+    }
+    .body-wrap {
+      svg {
+        left: 0;
+        top: grid(-3);
+      }
+      margin-top: grid(22);
+      width: columns(4);
+      float: left;
+    }
+  }
 }

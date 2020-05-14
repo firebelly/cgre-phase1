@@ -28,8 +28,10 @@ title: 'Focus Areas'
   </div>
 
   <div class="body-wrap">
-    <h3>01</h3>
-    <h2>movement-building + civic engagement</h2>
+    <div class="headers">
+      <h3>01</h3>
+      <h2>movement-building + civic engagement</h2>
+    </div>
 
     <p>
       We support the creation of strong, diverse coalitions advocating for and driving policies that enable all women to thrive, especially low-income women and women of color.
@@ -38,14 +40,6 @@ title: 'Focus Areas'
 </div>
 
 <div class="focus-area -two">
-  <div class="body-wrap">
-    <h3>02</h3>
-    <h2>access</h2>
-
-    <p>
-      We use our collective resources to ensure access to high quality reproductive healthcare, including contraception, sexual health services and abortion services.
-    </p>
-  </div>
 
   <div class="image-wrap">
     <svg width="180" height="541" viewBox="0 0 180 541" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -76,6 +70,17 @@ title: 'Focus Areas'
     </div>
   </div>
 
+  <div class="body-wrap">
+    <div class="headers">
+      <h3>02</h3>
+      <h2>access</h2>
+    </div>
+
+    <p>
+      We use our collective resources to ensure access to high quality reproductive healthcare, including contraception, sexual health services and abortion services.
+    </p>
+  </div>
+
 </div>
 
 <div class="focus-area -three">
@@ -97,8 +102,10 @@ title: 'Focus Areas'
   </div>
 
   <div class="body-wrap">
-    <h3>03</h3>
-    <h2 class="h1">judicial + legal</h2>
+    <div class="headers">
+      <h3>03</h3>
+      <h2 class="h1">judicial + legal</h2>
+    </div>
 
     <p>
       We’re invested in establishing a progressive judiciary at all levels and creating proactive legal strategies that advance women’s rights, including reproductive health.

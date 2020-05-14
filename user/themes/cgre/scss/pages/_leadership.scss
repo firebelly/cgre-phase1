@@ -6,9 +6,11 @@
   color: color(lightgray);
 
   .people {
+    margin: 0 #{-($gutter / 2)};
     .person {
       float: left;
       width: 50%;
+      padding: 0 $gutter / 2;
       h3 {
         margin: 28px 0 0;
         &.title {

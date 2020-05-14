@@ -4,7 +4,7 @@
   .container {
     z-index: z(header);
   }
-  height: grid(7.5);
+  height: grid(4.5);
 
   // Desktop styles
   @include media-md {
@@ -29,8 +29,8 @@
     position: absolute;
     top: grid(3);
     right: grid(3);
-    width: 173px;
-    height: 51px;
+    width: 180px;
+    height: 52px;
     img {
       display: block;
       position: absolute;
@@ -51,16 +51,21 @@
   }
   .logo-small {
     @include transition(all);
-    transform: translateY(20px);
     opacity: 0;
-    pointer-events: none;
+
+    @include media-md {
+      transform: translateY(20px);
+    }
   }
 }
 
 // Nav is stuck
 body.nav-stuck {
-  margin-top: 52px;
-  padding-top: 170px;
+  margin-top: 45px;
+  @include media-md {
+    margin-top: 52px;
+    padding-top: 170px;
+  }
   .header {
     position: fixed;
     top: 0;
@@ -72,10 +77,8 @@ body.nav-stuck {
     background: color(tan);
     .logo-full {
       opacity: 0;
-      transform: translateY(-20px);
     }
     .logo-small {
-      transform: translateY(0);
       opacity: 1;
     }
     @include drop-shadow;
@@ -90,6 +93,12 @@ body.nav-stuck {
 
   // Desktop styles
   @include media-md {
+    .logo-small {
+      transform: translateY(0);
+    }
+    .logo-full {
+      transform: translateY(-20px);
+    }
     .header {
       padding: 5px 0;
     }
@@ -109,9 +118,14 @@ body.nav-open {
   .nav-main {
     transform: translateX(0);
     .logo-stacked {
-      transition: all 0.2s 0.25s ease-out;
       transform: translateY(0);
       opacity: 1;
+    }
+  }
+  // Mobile-only
+  @include max-screen($breakpoint-nav) {
+    .nav-main .logo-stacked {
+      transition: all 0.2s 0.25s ease-out;
     }
   }
 }

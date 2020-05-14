@@ -31,17 +31,29 @@ body.page-home {
   @include clearfix;
   padding: grid(5) 0 grid(5);
 
+  svg {
+    z-index: z(lines-back);
+    rect {
+      vector-effect: non-scaling-stroke;
+    }
+  }
+
+  .staggered-image {
+    position: relative;
+    z-index: z(image-front);
+  }
+
   // Large headers
   h2 {
     @include h1;
-    margin: grid(2) 0 grid(2);
+    margin: grid(1) 0 grid(2);
 
     @include media-md {
       margin: grid(5) 0 grid(5);
     }
   }
   p {
-    @include p4;
+    @include p3;
 
     @include media-md {
       @include p1;

@@ -9,22 +9,20 @@
     margin-bottom: grid(3);
   }
   .staggered-image:nth-child(1) {
-    width: columns(6.5);
+    width: columns(7);
   }
   .staggered-image:nth-child(2) {
     position: absolute;
-    right: grid(2);
-    bottom: grid(-8);
-    width: columns(3.5);
+    right: 0;
+    bottom: grid(-6);
+    width: columns(4);
   }
 
   .header-wrap {
-    width: columns(6.5);
+    width: columns(7);
   }
 
   .body-wrap {
-    width: columns(7);
-    float: right;
     margin-top: grid(2);
   }
 
@@ -47,6 +45,7 @@
     }
 
     .body-wrap {
+      float: right;
       width: columns(4);
       margin-top: grid(-5);
     }
