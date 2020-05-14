@@ -10,7 +10,7 @@
       float: left;
       width: 50%;
       h3 {
-        margin: grid(3) 0 0;
+        margin: 28px 0 0;
         &.title {
           margin: 0 0 grid(2);
         }
@@ -31,7 +31,7 @@
       left: 0;
     }
     svg.-bottom {
-      top: grid(8);
+      top: grid(12);
     }
 
     .people {
