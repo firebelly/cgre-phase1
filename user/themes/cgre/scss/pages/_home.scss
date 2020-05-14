@@ -29,14 +29,23 @@ body.page-home {
 // Shared page block styles
 .page {
   @include clearfix;
+  padding: grid(5) 0 grid(5);
 
   // Large headers
   h2 {
     @include h1;
-    margin: grid(5) 0 grid(5);
+    margin: grid(2) 0 grid(2);
+
+    @include media-md {
+      margin: grid(5) 0 grid(5);
+    }
   }
   p {
-    @include p1;
+    @include p4;
+
+    @include media-md {
+      @include p1;
+    }
   }
   h3.divot {
     &::after {
