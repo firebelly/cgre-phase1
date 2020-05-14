@@ -631,7 +631,7 @@ body {
   text-rendering: optimizeLegibility;
   scroll-behavior: smooth;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 960px) {
   body {
     margin-top: 122px;
   }
@@ -687,7 +687,7 @@ svg.icon {
   margin: 0 auto;
   padding: 0 30px;
 }
-@media screen and (min-width: 1158px) {
+@media screen and (min-width: 960px) {
   .container {
     padding: 0;
   }
@@ -712,7 +712,7 @@ svg.icon {
     content: "md";
   }
 }
-@media screen and (min-width: 1158px) {
+@media screen and (min-width: 960px) {
   #breakpoint-indicator::after {
     content: "nav";
   }
@@ -1059,7 +1059,7 @@ form.success .status {
 .header .container {
   z-index: 50;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 960px) {
   .header {
     height: 100px;
   }
@@ -1073,7 +1073,7 @@ form.success .status {
   background: none;
   border: none;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 960px) {
   .header button {
     display: none;
   }
@@ -1091,7 +1091,7 @@ form.success .status {
   top: 0;
   right: 0;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 960px) {
   .header .logo {
     top: 0;
     right: 0;
@@ -1110,7 +1110,7 @@ form.success .status {
   transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
   opacity: 0;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 960px) {
   .header .logo-small {
     transform: translateY(20px);
   }
@@ -1119,7 +1119,7 @@ form.success .status {
 body.nav-stuck {
   margin-top: 45px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 960px) {
   body.nav-stuck {
     margin-top: 52px;
     padding-top: 170px;
@@ -1156,7 +1156,7 @@ body.nav-stuck .header .hamburger {
 body.nav-stuck .header .logo {
   top: 5px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 960px) {
   body.nav-stuck .logo-small {
     transform: translateY(0);
   }
@@ -1181,7 +1181,7 @@ body.nav-open .nav-main .logo-stacked {
   transform: translateY(0);
   opacity: 1;
 }
-@media screen and (max-width: 1157px) {
+@media screen and (max-width: 959px) {
   body.nav-open .nav-main .logo-stacked {
     transition: all 0.2s 0.25s ease-out;
   }
@@ -1210,7 +1210,7 @@ body.nav-open .nav-main .logo-stacked {
 .nav-main .logo-stacked {
   display: none;
 }
-@media screen and (max-width: 1157px) {
+@media screen and (max-width: 959px) {
   .nav-main {
     width: 100%;
     position: fixed;
@@ -1253,7 +1253,7 @@ body.nav-open .nav-main .logo-stacked {
     display: none;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 960px) {
   .nav-main ul li {
     display: inline-block;
     margin-right: 30px;

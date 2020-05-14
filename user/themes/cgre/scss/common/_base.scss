@@ -19,7 +19,7 @@ body {
   text-rendering: optimizeLegibility;
   scroll-behavior: smooth;
 
-  @include media-md {
+  @include media-nav {
     margin-top: 122px;
   }
 }

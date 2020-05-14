@@ -7,7 +7,7 @@
   height: grid(4.5);
 
   // Desktop styles
-  @include media-md {
+  @include media-nav {
     height: grid(10);
   }
 
@@ -20,7 +20,7 @@
     background: none;
     border: none;
 
-    @include media-md {
+    @include media-nav {
       display: none;
     }
   }
@@ -38,7 +38,7 @@
       right: 0;
     }
 
-    @include media-md {
+    @include media-nav {
       top: 0;
       right: 0;
       width: 354px;
@@ -53,7 +53,7 @@
     @include transition(all);
     opacity: 0;
 
-    @include media-md {
+    @include media-nav {
       transform: translateY(20px);
     }
   }
@@ -62,7 +62,7 @@
 // Nav is stuck
 body.nav-stuck {
   margin-top: 45px;
-  @include media-md {
+  @include media-nav {
     margin-top: 52px;
     padding-top: 170px;
   }
@@ -92,7 +92,7 @@ body.nav-stuck {
   }
 
   // Desktop styles
-  @include media-md {
+  @include media-nav {
     .logo-small {
       transform: translateY(0);
     }
@@ -191,7 +191,7 @@ body.nav-open {
 
 
   // Desktop styles
-  @include media-md {
+  @include media-nav {
     ul {
       li {
         display: inline-block;
