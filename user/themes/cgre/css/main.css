@@ -1620,6 +1620,7 @@ body.page-home .staggered-image img {
 @media screen and (max-width: 749px) {
   .page#focus-areas .focus-area.-two svg {
     top: -180px;
+    right: -30px;
     width: 65px;
   }
   .page#focus-areas .focus-area.-two .body-wrap .headers {

@@ -93,6 +93,7 @@
       @include max-screen($breakpoint-md) {
         svg {
           top: grid(-18);
+          right: -$mobile-global-padding;
           width: 65px;
         }
         .body-wrap {
