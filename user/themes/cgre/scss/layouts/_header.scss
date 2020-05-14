@@ -3,25 +3,49 @@
 .header {
   .container {
     z-index: z(header);
-    // position: fixed;
   }
+  height: grid(7.5);
+
+  // Desktop styles
+  @include media-md {
+    height: grid(10);
+  }
+
+  button {
+    top: 15px;
+    left: 15px;
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    background: none;
+    border: none;
+
+    @include media-md {
+      display: none;
+    }
+  }
+
   .logo {
     position: absolute;
-    right: 0;
-    top: 0;
-    width: 354px;
-    height: 103px;
+    top: grid(3);
+    right: grid(3);
+    width: 173px;
+    height: 51px;
     img {
       display: block;
       position: absolute;
       top: 0;
       right: 0;
     }
+
+    @include media-md {
+      top: 0;
+      right: 0;
+      width: 354px;
+      height: 103px;
+    }
   }
 
-  @include media-md {
-    height: grid(10);
-  }
   .logo-full {
     @include transition(all);
   }
@@ -36,108 +60,121 @@
 // Nav is stuck
 body.nav-stuck {
   margin-top: 52px;
+  padding-top: 170px;
   .header {
     position: fixed;
     top: 0;
     width: 100%;
+    height: 50px;
+    background: color(cream);
     padding: 4px 0;
     z-index: z(nav);
     background: color(tan);
-    // .logo {
-    //   width: 80px;
-    //   height: 32px;
-    // }
     .logo-full {
-      // transform: scale(0);
       opacity: 0;
       transform: translateY(-20px);
     }
     .logo-small {
       transform: translateY(0);
       opacity: 1;
-      // transform: scale(1);
     }
     @include drop-shadow;
+
+    .hamburger {
+      top: 0;
+    }
+    .logo {
+      top: 5px;
+    }
   }
 
+  // Desktop styles
   @include media-md {
     .header {
-      padding: grid(1) 0;
+      padding: 5px 0;
+    }
+    .header {
+      .logo {
+        top: -2px;
+      }
     }
   }
 }
 
 // Nav is open for hambusiness
-// body.nav-open {
-//   #hamburger {
-//     opacity: 0;
-//   }
-//   .nav-main {
-//     .site-nav {
-//       transform: translateX(0);
-//     }
-//   }
-// }
+body.nav-open {
+  .hamburger {
+    opacity: 0;
+  }
+  .nav-main {
+    transform: translateX(0);
+    .logo-stacked {
+      transition: all 0.2s 0.25s ease-out;
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+}
 
 // Primary nav container
 .nav-main {
   @include clearfix;
-
-  // "Menu" and "Close" text styles
   @include h4;
   font-size: 12px;
   text-transform: uppercase;
-  a {
-    text-align: center;
-    position: relative;
-    &::before,
-    &::after {
-      @include transition(height);
-      content: '';
-      position: absolute;
-      top: -10px;
-      left: 50%;
-      width: 20px;
-      height: 0;
-      background: color(pink);
-      transform: translateX(-50%);
-    }
-    &:after {
-      top: auto;
-      bottom: -10px;
-    }
-    span {
-      position: relative;
-      letter-spacing: 0.1em;
-      &::after {
-        @include transition(all);
-        top: -6px;
-        left: 50%;
-        z-index: 1;
-        // display: none;
-        white-space: nowrap;
-        position: absolute;
-        letter-spacing: 0.1em;
-        background-color: color(cream);
-        content: attr(data-title);
-        transform: translateX(-50%);
-      }
+  @include transition(transform);
+  letter-spacing: 0.1em;
+  .logo-stacked {
+    display: none;
+  }
 
-    }
-    &:hover,
-    &:focus,
-    &.active {
-      span {
-        &::after {
-          letter-spacing: 0.25em;
-        }
+  // Mobile only styles
+  @include max-screen($breakpoint-nav) {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: 1000;
+    transform: translateX(-100%);
+    background: color(darkgray);
+    padding: grid(3);
+    margin: 0;
+
+    .logo-stacked {
+      transition: all 0.15s 0 ease-out;
+      opacity: 0;
+      transform: translateY(-20px);
+      display: block;
+      position: absolute;
+      bottom: grid(5);
+      left: grid(3);
+      &::before {
+        content: '';
+        position: absolute;
+        top: grid(-6);
+        left: 0;
+        width: 60px;
+        height: 5px;
+        background: color(pink);
       }
-      &::before,
-      &::after {
-        height: 3px;
+    }
+    ul {
+      padding-top: grid(6);
+    }
+    a {
+      color: color(lightgray);
+      display: block;
+      padding: grid(1) 0;
+      span {
+        &::before,
+        &::after {
+          display: none;
+        }
       }
     }
   }
+
 
   // Desktop styles
   @include media-md {
@@ -147,36 +184,59 @@ body.nav-stuck {
         margin-right: grid(3);
       }
     }
+
+    a {
+      position: relative;
+      &::before,
+      &::after {
+        @include transition(height);
+        content: '';
+        position: absolute;
+        top: -10px;
+        left: 50%;
+        width: 20px;
+        height: 0;
+        background: color(pink);
+        transform: translateX(-50%);
+      }
+      &:after {
+        top: auto;
+        bottom: -10px;
+      }
+      // Duplicate of nav labels for expanding letter-spacing hover effect
+      span {
+        position: relative;
+        &::after {
+          @include transition(all);
+          top: -6px;
+          left: 50%;
+          z-index: 1;
+          white-space: nowrap;
+          position: absolute;
+          letter-spacing: 0.1em;
+          background-color: color(cream);
+          content: attr(data-title);
+          transform: translateX(-50%);
+        }
+
+      }
+      &:hover,
+      &:focus,
+      &.active {
+        span {
+          &::after {
+            letter-spacing: 0.25em;
+          }
+        }
+        &::before,
+        &::after {
+          height: 3px;
+        }
+      }
+    }
   }
 
   // Second desktop breakpoint
   @include media-nav {
-  }
-
-}
-
-// Nav is stuck
-body.nav-stuck {
-  padding-top: 170px;
-  .header {
-    position: fixed;
-    background: color(cream);
-    top: 0;
-    width: 100%;
-    padding: 4px 0;
-    z-index: z(nav);
-    height: 50px;
-  }
-
-  @include media-md {
-  }
-}
-
-// Nav is open for hambusiness
-body.nav-open {
-  .nav-main {
-    .site-nav {
-      transform: translateX(0);
-    }
   }
 }

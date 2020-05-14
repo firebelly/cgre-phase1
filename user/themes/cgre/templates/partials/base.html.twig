@@ -33,7 +33,20 @@
     <div class="header">
         <div class="container">
             {% block header_navigation %}
+            <button class="toggle-nav hamburger">
+                <svg width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="20" height="2" fill="#FC4F60"/>
+                  <rect y="5" width="20" height="2" fill="#FC4F60"/>
+                  <rect y="10" width="10" height="2" fill="#FC4F60"/>
+                </svg>
+            </button>
             <nav class="nav-main">
+                <button class="close-nav">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="0.00537109" y="14.1367" width="20" height="2" transform="rotate(-44.7732 0.00537109 14.1367)" fill="#FC4F60"/>
+                      <rect x="14.1421" y="15.5562" width="20" height="2" transform="rotate(-135 14.1421 15.5562)" fill="#FC4F60"/>
+                    </svg>
+                </button>
                 <ul>
                   <li><a data-title="Mission" href="/#mission"><span data-title="Mission">Mission</span></a></li>
                   <li><a data-title="Focus Areas" href="/#focus-areas"><span data-title="Focus Areas">Focus Areas</span></a></li>
@@ -62,7 +75,9 @@
         <div class="container">
             <div class="logo">
                 <div class="divot"></div>
-                <img src="/user/themes/cgre/images/cgre-logo-left-aligned.svg" alt="CGRE logo">
+                <div class="logo-stacked">
+                    <img src="/user/themes/cgre/images/cgre-logo-left-aligned.svg" alt="CGRE logo">
+                </div>
             </div>
             <div class="block contact">
                 <h4 class="divot">contacts</h4>
