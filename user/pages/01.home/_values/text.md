@@ -17,7 +17,7 @@ title: 'Values'
   <h2 class="h1">cultivating courage + advancing the field</h2>
 
   <p>
-    We embrace innovation and creativity. We try what others may not. We operate with deep respect for the field and trust our partners to define their own purpose, while elevating the priorities of those most impacted. We know long-term change is only possible through committed intersectional collaboration. So we listen. We honor diverse perspectives. And whatever challenges we face, we remain stubborn optimists.
+    We embrace innovation and creativity. We operate with deep respect for the field and trust our partners to define their own purpose, while elevating the priorities of those most impacted. We know long-term change is only possible through committed intersectional collaboration. So we listen. We honor diverse perspectives. And whatever challenges we face, we remain stubborn optimists.
   </p>
 </div>
 

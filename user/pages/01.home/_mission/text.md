@@ -4,7 +4,7 @@ title: 'Mission'
 
 <div class="image-wrap">
   <div class="staggered-image">
-    <img class="-reveal" src="/user/images/cgre-header-back.jpg" alt="Women protesting">
+    <img class="-reveal" src="/user/images/cgre-header-back.jpg" alt="Women protesting ">
   </div>
   <div class="staggered-image">
     <img class="-reveal" src="/user/images/cgre-mother.jpg" alt="Mother and child">
@@ -19,7 +19,7 @@ title: 'Mission'
 
   <div class="body-wrap">
     <p>
-      Established in 2018, CGRE aims  to raise $100 million annually in new funding to pursue select, transformational opportunities. Our vision is a world where every woman has the knowledge, resources, and power to shape her own life. By working together and pooling resources, we can go further, faster in support of that vision.
+      Established in 2018, CGRE aims  to raise $100 million annually in new funding to pursue select, transformational opportunities. Our vision is a world where every woman across a full range of identities and experiences has the knowledge, resources, and power to shape her own life. By working together and pooling resources, we can go further, and faster in support of that vision.
     </p>
   </div>
 </div>
