@@ -1,6 +1,5 @@
 ---
 title: 'Mission'
-cache_enable: false
 tagline: mobilizing funders to support gender + reproductive equity
 ---
 
