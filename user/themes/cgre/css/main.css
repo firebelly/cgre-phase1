@@ -1903,7 +1903,7 @@ body.page-home .staggered-image img {
     padding: 0 10px;
   }
   .page#leadership .people .person .bio {
-    padding-right: 10px;
+    padding: 0 10px 20px 0;
   }
 }
 

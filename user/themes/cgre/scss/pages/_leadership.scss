@@ -50,7 +50,7 @@
         flex: 1 1 50%;
         padding: 0 $gutter / 2;
         .bio {
-          padding-right: grid(1);
+          padding: 0 grid(1) grid(2) 0;
         }
       }
     }
