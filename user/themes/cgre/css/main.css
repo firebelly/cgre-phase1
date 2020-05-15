@@ -628,7 +628,7 @@ body {
 }
 @media screen and (min-width: 960px) {
   body {
-    margin-top: 122px;
+    margin-top: 70px;
   }
 }
 
@@ -858,14 +858,14 @@ svg.icon {
 }
 
 .show-for-medium-up {
-  display: none;
+  display: none !important;
 }
 @media screen and (min-width: 750px) {
   .show-for-medium-up {
-    display: block;
+    display: block !important;
   }
   .show-for-medium-up.-inline {
-    display: inline;
+    display: inline !important;
   }
 }
 
@@ -916,6 +916,15 @@ svg.icon {
   padding: 20px 0;
 }
 
+.lines {
+  position: absolute;
+}
+.lines i {
+  display: block;
+  border-top: 1px solid #004450;
+  margin-bottom: 29px;
+}
+
 .-reveal {
   opacity: 0;
   transform: translate3d(0, 50%, 0);
@@ -947,7 +956,7 @@ form label {
   font-size: 21px;
   line-height: 30px;
   display: block;
-  padding: 0 24px 20px 0;
+  padding: 0 24px 12px 0;
   margin: 0;
 }
 form fieldset {
@@ -988,7 +997,7 @@ form textarea {
   letter-spacing: -0.02em;
   background: none;
   border: 1px solid #004450;
-  padding: 20px;
+  padding: 15px;
   width: 100%;
   margin-bottom: 40px;
   max-height: 220px;
@@ -1046,6 +1055,53 @@ form.success .actions {
 form.success .status {
   margin: 50px 0;
   display: block;
+}
+
+.form-select-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+.form-select-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 24px;
+  right: 20px;
+  z-index: 1000;
+  width: 30px;
+  height: 18px;
+  background: url("/user/themes/cgre/images/down-arrow.svg") no-repeat;
+  pointer-events: none;
+}
+.form-select-wrapper select {
+  font-weight: normal;
+  font-family: "Garnett", sans-serif;
+  font-feature-settings: "kern" 1;
+  -webkit-font-kerning: normal;
+          font-kerning: normal;
+  font-size: 22px;
+  line-height: 30px;
+  letter-spacing: -0.02em;
+  background: none;
+  border: 1px solid #004450;
+  padding: 15px;
+  display: block;
+  width: 100%;
+  margin-bottom: 40px;
+  color: #004450;
+  border-radius: 0;
+  cursor: pointer;
+  outline: 0;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+.form-select-wrapper select:focus:-moz-focusring {
+  color: transparent;
+  text-shadow: 0 0 0 #000;
+}
+.form-select-wrapper select::-ms-expand {
+  display: none;
 }
 
 .header {
@@ -1117,7 +1173,7 @@ body.nav-stuck {
 @media screen and (min-width: 960px) {
   body.nav-stuck {
     margin-top: 52px;
-    padding-top: 170px;
+    padding-top: 120px;
   }
 }
 body.nav-stuck .header {
@@ -1416,6 +1472,9 @@ body.page-home .wrap:after {
 body.page-home .image-wrap {
   position: relative;
 }
+body.page-home .staggered-image {
+  display: block;
+}
 body.page-home .staggered-image img {
   display: block;
   width: 100%;
@@ -1514,6 +1573,17 @@ body.page-home .staggered-image img {
   bottom: -60px;
   width: 40%;
 }
+.page#mission .lines.-one {
+  left: 50%;
+  width: 100vw;
+  transform: translate(-50vw, 40px);
+}
+.page#mission .lines.-one i:nth-child(n+7) {
+  display: none;
+}
+.page#mission .lines.-two {
+  display: none;
+}
 .page#mission .header-wrap {
   width: 70%;
 }
@@ -1521,6 +1591,23 @@ body.page-home .staggered-image img {
   margin-top: 20px;
 }
 @media screen and (min-width: 750px) {
+  .page#mission {
+    padding-top: 10px;
+  }
+  .page#mission .lines.-one {
+    width: calc(100vw - 10%);
+    transform: translate(-50vw, 80px);
+  }
+  .page#mission .lines.-one i:nth-child(n+7) {
+    display: block;
+  }
+  .page#mission .lines.-two {
+    display: block;
+    width: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -120px;
+  }
   .page#mission .image-wrap {
     margin-bottom: 60px;
   }
@@ -1538,7 +1625,7 @@ body.page-home .staggered-image img {
   .page#mission .body-wrap {
     float: right;
     width: 40%;
-    margin-top: -50px;
+    margin-top: 0;
   }
 }
 
@@ -1767,19 +1854,20 @@ body.page-home .staggered-image img {
   background: #5759BC;
   color: #DEE2DF;
 }
-.page#leadership .people {
-  margin: 0 -10px;
-}
-.page#leadership .people .person {
-  float: left;
-  width: 50%;
-  padding: 0 10px;
-}
 .page#leadership .people .person h3 {
   margin: 28px 0 0;
 }
+.page#leadership .people .person h3.pronouns {
+  margin: 0;
+}
 .page#leadership .people .person h3.title {
   margin: 0 0 20px;
+}
+.page#leadership .people .person h3.title::after {
+  content: "—";
+  display: block;
+  margin: 20px 0;
+  color: #FCAF17;
 }
 .page#leadership .people .person p {
   font-weight: normal;
@@ -1805,11 +1893,17 @@ body.page-home .staggered-image img {
     top: 120px;
   }
   .page#leadership .people {
-    padding: 50px 0 120px 20%;
+    display: flex;
+    flex-flow: row wrap;
+    margin: -220px -10px 0;
+    padding: 0 0 0 20%;
   }
   .page#leadership .people .person {
-    width: 25%;
-    padding-left: 20px;
+    flex: 1 1 50%;
+    padding: 0 10px;
+  }
+  .page#leadership .people .person .bio {
+    padding-right: 10px;
   }
 }
 

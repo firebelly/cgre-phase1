@@ -5,6 +5,16 @@
   padding: grid(2) 0;
 }
 
+// Decorative lines
+.lines {
+  position: absolute;
+  i {
+    display: block;
+    border-top: 1px solid color(darkgray);
+    margin-bottom: 29px;
+  }
+}
+
 // Image reveals
 .-reveal {
   opacity: 0;

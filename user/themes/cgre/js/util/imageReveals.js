@@ -15,7 +15,7 @@ const imageReveals = {
   init() {
     if ($('.-reveal').length) {
       $window = $(window);
-      reveals = document.querySelectorAll('img.-reveal');
+      reveals = document.querySelectorAll('.-reveal');
 
       imageReveals.resize();
       imageReveals.update();

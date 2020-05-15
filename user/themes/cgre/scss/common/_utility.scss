@@ -32,11 +32,11 @@
   }
 }
 .show-for-medium-up {
-  display: none;
+  display: none!important;
   @include media-md {
-    display: block;
+    display: block!important;
     &.-inline {
-      display: inline;
+      display: inline!important;
     }
   }
 }
