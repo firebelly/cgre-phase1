@@ -6,15 +6,20 @@
   color: color(lightgray);
 
   .people {
-    margin: 0 #{-($gutter / 2)};
     .person {
-      float: left;
-      width: 50%;
-      padding: 0 $gutter / 2;
       h3 {
         margin: 28px 0 0;
+        &.pronouns {
+          margin: 0;
+        }
         &.title {
           margin: 0 0 grid(2);
+          &::after {
+            content: '—';
+            display: block;
+            margin: grid(2) 0;
+            color: color(yellow);
+          }
         }
       }
       p {
@@ -37,10 +42,16 @@
     }
 
     .people {
-      padding: grid(5) 0 grid(12) columns(2);
+      display: flex;
+      flex-flow: row wrap;
+      margin: grid(-22) #{-($gutter / 2)} 0;
+      padding: 0 0 0 columns(2);
       .person {
-        width: columns(2, 8);
-        padding-left: $gutter;
+        flex: 1 1 50%;
+        padding: 0 $gutter / 2;
+        .bio {
+          padding-right: grid(1);
+        }
       }
     }
   }
