@@ -18,6 +18,19 @@
     width: columns(4);
   }
 
+  // Style decorative lines in header
+  .lines.-one {
+    left: 50%;
+    width: 100vw;
+    transform: translate(-50vw, grid(4));
+    i:nth-child(n+7) {
+      display: none;
+    }
+  }
+  .lines.-two {
+    display: none;
+  }
+
   .header-wrap {
     width: columns(7);
   }
@@ -28,6 +41,23 @@
 
   // Desktop styles
   @include media-md {
+    padding-top: grid(1);
+
+    .lines.-one {
+      width: calc(100vw - #{columns(1)});
+      transform: translate(-50vw, grid(8));
+      i:nth-child(n+7) {
+        display: block;
+      }
+    }
+    .lines.-two {
+      display: block;
+      width: 70px;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: grid(-12);
+    }
+
     .image-wrap {
       margin-bottom: grid(6);
     }
@@ -47,7 +77,7 @@
     .body-wrap {
       float: right;
       width: columns(4);
-      margin-top: grid(-5);
+      margin-top: 0;
     }
 
   }
