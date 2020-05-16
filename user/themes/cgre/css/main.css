@@ -1893,22 +1893,35 @@ body.page-home .staggered-image img {
 }
 
 .page-privacy-policy h1.divot {
-  margin-bottom: 80px;
+  margin-bottom: 40px;
 }
 .page-privacy-policy h1.divot::before {
   content: "";
   display: block;
-  width: 80px;
-  height: 10px;
+  width: 46px;
+  height: 4px;
   background: #FC4F60;
-  margin: 10px 0 60px;
+  margin: 40px 0 40px;
 }
 .page-privacy-policy #body .container {
-  padding: 40px 0 100px;
+  padding-top: 40px;
+  padding-bottom: 100px;
 }
 @media screen and (min-width: 750px) {
-  .page-privacy-policy #body .container .body-wrap {
-    padding: 0 10%;
+  .page-privacy-policy #body .container {
+    padding-top: 40px;
+    padding-bottom: 100px;
+  }
+  .page-privacy-policy h1.divot {
+    margin-bottom: 80px;
+  }
+  .page-privacy-policy h1.divot::before {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 10px;
+    background: #FC4F60;
+    margin: 10px 0 60px;
   }
 }
 
