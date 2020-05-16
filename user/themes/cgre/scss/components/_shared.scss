@@ -8,10 +8,26 @@
 // Decorative lines
 .lines {
   position: absolute;
+  &.-reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+    @include media-md {
+      transform: none;
+    }
+  }
   i {
     display: block;
     border-top: 1px solid color(darkgray);
     margin-bottom: 29px;
+    opacity: 0;
+    will-change: opacity;
+  }
+  &.-active {
+    i {
+      animation: fadeIn 0.25s linear;
+      animation-fill-mode: forwards;
+    }
   }
   &.-large i {
     margin-bottom: 59px;
@@ -25,6 +41,23 @@
   &.-lightgray i {
     border-color: color(lightgray);
   }
+
+  @for $i from 1 through 20 {
+    i:nth-child(#{$i}) {
+      animation-delay: #{0.5 + 0.05 *  $i}s;
+    }
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 // Image reveals
@@ -32,6 +65,7 @@
   opacity: 0;
   transform: translate3d(0, 50%, 0);
   transition: transform 1.25s $cubic-ease2, opacity 0.5s $cubic-ease2;
+  will-change: transform, opacity;
 
   @include media-md {
     transform: translate3d(0, 30%, 0);
