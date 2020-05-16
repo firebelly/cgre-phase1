@@ -43,6 +43,9 @@
       }
     }
   }
+  textarea {
+    height: 150px;
+  }
 
   @include media-md {
     // SVG along left edge

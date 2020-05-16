@@ -2032,6 +2032,9 @@ body.page-home .staggered-image img {
   background: #FC4F60 url("/user/themes/cgre/images/arrow-white.svg") 95% 50% no-repeat;
   color: #fff;
 }
+.page#contact textarea {
+  height: 150px;
+}
 @media screen and (min-width: 750px) {
   .page#contact .lines.-one {
     width: 70px;
