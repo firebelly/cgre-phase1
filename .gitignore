@@ -54,3 +54,7 @@ user/themes/cgre/fonts/*
 config.codekit3
 *.map
 node_modules
+
+# staging/production config overrides
+user/cgre.firebelly.co
+user/cgre.org
