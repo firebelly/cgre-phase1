@@ -1,6 +1,4 @@
 {% extends 'partials/base.html.twig' %}
-{% macro pageLinkName(text) %} {{ text|lower|replace({' ':'-'}) }} {% endmacro %}
-
 
 {% block content %}
 
@@ -9,7 +7,7 @@
   {% endblock %}
 
   {% for module in page.collection() %}
-      <section class="page" data-title="{{ module.title }}" id="{{ _self.pageLinkName(module.menu)|trim }}">
+      <section class="page" data-title="{{ module.title }}" id="{{ module.menu|lower|replace({' ':'-'}) }}">
         <div class="container">
           {{ module.content }}
         </div>

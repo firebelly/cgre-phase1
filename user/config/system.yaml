@@ -43,3 +43,6 @@ debugger:
 gpm:
   releases: stable
   verify_peer: true
+
+strict_mode:
+  twig_compat: false

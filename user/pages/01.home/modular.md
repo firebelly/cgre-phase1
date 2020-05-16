@@ -3,7 +3,7 @@ title: Home
 body_classes: page-home home
 onpage_menu: true
 content:
-    items: @self.modular
+    items: '@self.modular'
     order:
         by: default
         dir: asc
