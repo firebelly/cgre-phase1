@@ -394,6 +394,11 @@ th {
   padding: 0;
 }
 
+.page#leadership p, .page#focus-areas p, footer p, .h3, h3 {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 @font-face {
   font-family: "Central Avenue";
   src: url("../fonts/central-avenue-bold.eot");
@@ -499,7 +504,7 @@ th {
   text-transform: uppercase;
   font-weight: bold;
   letter-spacing: 0.02em;
-  font-size: 14px;
+  font-size: 18px;
   line-height: 20px;
 }
 @media screen and (min-width: 750px) {
@@ -883,11 +888,12 @@ svg.icon {
   font-weight: bold;
   font-size: 21px;
   line-height: 30px;
+  font-size: 12px;
   display: inline-block;
   text-align: center;
   line-height: 1.4;
-  padding: 20px 30px;
   margin: 0;
+  padding: 15px 10px;
   position: relative;
   border: 1px solid #DCD3DE;
   background: transparent;
@@ -911,6 +917,12 @@ svg.icon {
   width: 24px;
   height: 24px;
 }
+@media screen and (min-width: 750px) {
+  .button {
+    padding: 20px 30px;
+    font-size: 21px;
+  }
+}
 
 .actions {
   padding: 20px 0;
@@ -923,6 +935,18 @@ svg.icon {
   display: block;
   border-top: 1px solid #004450;
   margin-bottom: 29px;
+}
+.lines.-large i {
+  margin-bottom: 59px;
+}
+.lines.-yellow i {
+  border-color: #FCAF17;
+}
+.lines.-pink i {
+  border-color: #FC4F60;
+}
+.lines.-lightgray i {
+  border-color: #DEE2DF;
 }
 
 .-reveal {
@@ -955,9 +979,16 @@ form label {
   font-weight: bold;
   font-size: 21px;
   line-height: 30px;
+  font-size: 12px;
   display: block;
-  padding: 0 24px 12px 0;
+  padding: 0 24px 0 0;
   margin: 0;
+}
+@media screen and (min-width: 750px) {
+  form label {
+    padding: 0 24px 12px 0;
+    font-style: 21px;
+  }
 }
 form fieldset {
   border: none;
@@ -995,11 +1026,12 @@ form textarea {
   font-size: 22px;
   line-height: 30px;
   letter-spacing: -0.02em;
+  font-size: 16px;
   background: none;
   border: 1px solid #004450;
-  padding: 15px;
+  padding: 5px 10px;
   width: 100%;
-  margin-bottom: 40px;
+  margin-bottom: 10px;
   max-height: 220px;
 }
 form input[type=text]:focus,
@@ -1025,6 +1057,13 @@ form textarea::placeholder {
   color: rgba(0, 68, 80, 0.3);
 }
 @media screen and (min-width: 750px) {
+  form input[type=text],
+form input[type=email],
+form textarea {
+    padding: 15px;
+    font-size: 21px;
+    margin-bottom: 40px;
+  }
   form input[type=text].half,
 form input[type=email].half,
 form textarea.half {
@@ -1065,13 +1104,21 @@ form.success .status {
 .form-select-wrapper::after {
   content: "";
   position: absolute;
-  top: 24px;
+  top: 15px;
   right: 20px;
   z-index: 1000;
-  width: 30px;
-  height: 18px;
+  width: 22px;
+  height: 14px;
   background: url("/user/themes/cgre/images/down-arrow.svg") no-repeat;
+  background-size: contain;
   pointer-events: none;
+}
+@media screen and (min-width: 750px) {
+  .form-select-wrapper::after {
+    width: 30px;
+    height: 18px;
+    top: 24px;
+  }
 }
 .form-select-wrapper select {
   font-weight: normal;
@@ -1082,9 +1129,10 @@ form.success .status {
   font-size: 22px;
   line-height: 30px;
   letter-spacing: -0.02em;
+  font-size: 16px;
   background: none;
   border: 1px solid #004450;
-  padding: 15px;
+  padding: 5px 10px;
   display: block;
   width: 100%;
   margin-bottom: 40px;
@@ -1095,6 +1143,12 @@ form.success .status {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
+}
+@media screen and (min-width: 750px) {
+  .form-select-wrapper select {
+    padding: 15px;
+    font-size: 21px;
+  }
 }
 .form-select-wrapper select:focus:-moz-focusring {
   color: transparent;
@@ -1117,7 +1171,7 @@ form.success .status {
 }
 .header button {
   top: 15px;
-  left: 15px;
+  left: 23px;
   width: 45px;
   height: 45px;
   position: absolute;
@@ -1263,6 +1317,7 @@ body.nav-open .nav-main .logo-stacked {
 }
 @media screen and (max-width: 959px) {
   .nav-main {
+    font-size: 16px;
     width: 100%;
     position: fixed;
     top: 0;
@@ -1280,7 +1335,7 @@ body.nav-open .nav-main .logo-stacked {
     transform: translateY(-20px);
     display: block;
     position: absolute;
-    bottom: 50px;
+    bottom: 30px;
     left: 30px;
   }
   .nav-main .logo-stacked::before {
@@ -1294,11 +1349,18 @@ body.nav-open .nav-main .logo-stacked {
   }
   .nav-main ul {
     padding-top: 60px;
+    height: 55%;
+    display: flex;
+    flex-flow: column;
+  }
+  .nav-main ul li {
+    flex: 1;
   }
   .nav-main a {
     color: #DEE2DF;
-    display: block;
-    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    height: 100%;
   }
   .nav-main a span::before, .nav-main a span::after {
     display: none;
@@ -1356,6 +1418,7 @@ body.nav-open .nav-main .logo-stacked {
 footer {
   background: #004450;
   color: #DEE2DF;
+  padding: 40px 0 80px;
 }
 footer:after {
   content: "";
@@ -1373,11 +1436,22 @@ footer p {
   letter-spacing: -0.02em;
   font-size: 14px;
 }
+footer h4.divot {
+  font-size: 12px;
+}
 footer h4.divot::after {
   content: "—";
   font-weight: normal;
   display: block;
-  margin: 20px 0;
+  margin: 10px 0 20px;
+}
+@media screen and (min-width: 750px) {
+  footer h4.divot {
+    font-size: 21px;
+  }
+  footer h4.divot::after {
+    margin: 20px 0;
+  }
 }
 footer a {
   transition-duration: 0.2s;
@@ -1433,6 +1507,16 @@ footer form button.button {
   font-weight: normal;
   vertical-align: bottom;
 }
+footer .logo .divot {
+  display: block;
+  width: 46px;
+  height: 4px;
+  background: #FC4F60;
+  margin: 80px 0 40px;
+}
+footer .logo .logo-stacked {
+  width: 121px;
+}
 @media screen and (min-width: 750px) {
   footer {
     padding: 100px 0 200px;
@@ -1442,15 +1526,16 @@ footer form button.button {
     float: left;
   }
   footer .logo .divot {
-    display: block;
     width: 80px;
     height: 10px;
-    background: #FC4F60;
     margin: 10px 0 130px;
+  }
+  footer .logo .logo-stacked {
+    width: 180px;
   }
   footer .block.contact {
     width: 20%;
-    float: left;
+    float: right;
   }
   footer form .form-field:nth-child(1) {
     flex: 1 1 75%;
@@ -1548,6 +1633,9 @@ body.page-home .staggered-image img {
     letter-spacing: -0.02em;
   }
 }
+.page h3.divot {
+  font-size: 14px;
+}
 .page h3.divot::after {
   content: "—";
   display: block;
@@ -1555,6 +1643,9 @@ body.page-home .staggered-image img {
 @media screen and (min-width: 750px) {
   .page {
     padding: 60px 0 100px;
+  }
+  .page h3.divot {
+    font-size: 18px;
   }
 }
 
@@ -1637,7 +1728,11 @@ body.page-home .staggered-image img {
   color: #FCAF17;
 }
 .page#focus-areas .header-wrap {
-  width: 50%;
+  margin-top: -20px;
+}
+.page#focus-areas .header-wrap .lines {
+  width: 30px;
+  position: relative;
 }
 @media screen and (min-width: 750px) {
   .page#focus-areas {
@@ -1655,37 +1750,28 @@ body.page-home .staggered-image img {
 .page#focus-areas .focus-area h2 {
   color: #FCAF17;
 }
-.page#focus-areas .focus-area svg {
-  position: absolute;
+.page#focus-areas .focus-area .lines {
+  display: none;
+}
+@media screen and (min-width: 750px) {
+  .page#focus-areas .focus-area .lines {
+    display: block;
+  }
 }
 .page#focus-areas .focus-area.-one > h2 {
   width: 60%;
 }
-.page#focus-areas .focus-area.-one svg {
-  left: -25%;
-  top: -120px;
-}
 .page#focus-areas .focus-area.-one .image-wrap {
-  width: 45%;
-  margin: 20px 0 0 0;
-  float: left;
-}
-@media screen and (max-width: 749px) {
-  .page#focus-areas .focus-area.-one svg {
-    width: 105px;
-  }
-  .page#focus-areas .focus-area.-one .body-wrap .headers {
-    margin-top: 60px;
-    width: 45%;
-    float: right;
-  }
-  .page#focus-areas .focus-area.-one .body-wrap p {
-    padding-top: 20px;
-    clear: left;
-  }
+  margin: 30px 0 20px;
 }
 @media screen and (min-width: 750px) {
+  .page#focus-areas .focus-area.-one .lines {
+    width: 270px;
+    left: -25%;
+    top: -120px;
+  }
   .page#focus-areas .focus-area.-one .image-wrap {
+    float: left;
     width: 40%;
     margin: 200px 0 0 10%;
   }
@@ -1695,30 +1781,13 @@ body.page-home .staggered-image img {
     float: right;
   }
 }
-.page#focus-areas .focus-area.-two svg {
+.page#focus-areas .focus-area.-two .lines {
+  width: 180px;
   right: -25%;
   top: -90px;
 }
 .page#focus-areas .focus-area.-two .image-wrap {
-  width: 45%;
-  margin: 20px 0 0 0;
-  float: right;
-}
-@media screen and (max-width: 749px) {
-  .page#focus-areas .focus-area.-two svg {
-    top: -180px;
-    right: -30px;
-    width: 65px;
-  }
-  .page#focus-areas .focus-area.-two .body-wrap .headers {
-    margin-top: 100px;
-    width: 45%;
-    float: left;
-  }
-  .page#focus-areas .focus-area.-two .body-wrap p {
-    padding-top: 20px;
-    clear: right;
-  }
+  margin: 50px 0 20px 0;
 }
 @media screen and (min-width: 750px) {
   .page#focus-areas .focus-area.-two .body-wrap {
@@ -1733,30 +1802,13 @@ body.page-home .staggered-image img {
   }
 }
 .page#focus-areas .focus-area.-three .image-wrap {
-  width: 45%;
-  margin: 40px 0 0 0;
-  float: left;
-}
-@media screen and (max-width: 749px) {
-  .page#focus-areas .focus-area.-three svg {
-    left: -25%;
-    top: -40px;
-    width: 106px;
-  }
-  .page#focus-areas .focus-area.-three .body-wrap .headers {
-    margin-top: 100px;
-    width: 45%;
-    float: right;
-  }
-  .page#focus-areas .focus-area.-three .body-wrap p {
-    padding-top: 20px;
-    clear: left;
-  }
+  margin: 40px 0 20px 0;
 }
 @media screen and (min-width: 750px) {
-  .page#focus-areas .focus-area.-three svg {
+  .page#focus-areas .focus-area.-three .lines {
+    width: 290px;
     left: -25%;
-    bottom: -120px;
+    bottom: -119px;
   }
   .page#focus-areas .focus-area.-three .body-wrap {
     margin-top: 310px;
@@ -1764,6 +1816,7 @@ body.page-home .staggered-image img {
     float: right;
   }
   .page#focus-areas .focus-area.-three .image-wrap {
+    float: left;
     width: 40%;
     margin: 180px 10% 0 10%;
   }
@@ -1772,59 +1825,63 @@ body.page-home .staggered-image img {
 .page#values h2 {
   color: #FCAF17;
 }
-.page#values svg {
+.page#values .lines.-one {
+  width: 30px;
   position: absolute;
+  top: 0;
+  left: 30px;
 }
-.page#values .image-wrap {
-  width: 40%;
-  margin: -230px 0 0 10%;
+.page#values .image-wrap:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.page#values .image-wrap .staggered-image {
   float: right;
+  width: 70%;
 }
 .page#values .image-wrap .staggered-image:nth-child(2) {
-  width: 75%;
-  margin-top: -50px;
-  margin-left: -25%;
-}
-.page#values .image-wrap svg {
-  left: 31.25%;
-  bottom: -120px;
+  float: left;
+  width: 40%;
+  margin-top: -100px;
 }
 .page#values .body-wrap {
-  margin-top: 220px;
+  margin-top: 30px;
 }
-.page#values .body-wrap svg {
-  position: absolute;
-  left: 30px;
-  top: -270px;
-}
-@media screen and (max-width: 749px) {
-  .page#values svg {
-    width: 58px;
-  }
-  .page#values .headers {
-    width: 30%;
-  }
+.page#values .body-wrap .lines {
+  display: none;
 }
 @media screen and (min-width: 750px) {
+  .page#values .lines.-one {
+    display: none;
+  }
   .page#values .image-wrap {
-    width: 40%;
+    width: 50%;
+    float: right;
     margin: 100px 0 0 10%;
   }
-  .page#values .image-wrap .staggered-image:nth-child(2) {
-    width: 75%;
-    margin-top: -120px;
-    margin-left: -25%;
+  .page#values .image-wrap .staggered-image {
+    width: 80%;
   }
-  .page#values .image-wrap svg {
-    left: 31.25%;
-    bottom: -120px;
+  .page#values .image-wrap .staggered-image:nth-child(2) {
+    width: 60%;
+    float: left;
+    margin-top: -120px;
+  }
+  .page#values .image-wrap .lines {
+    display: block;
+    width: 157px;
+    left: calc(40% + 20px);
+    bottom: -119px;
   }
   .page#values .body-wrap {
     margin-top: 220px;
     width: 40%;
     float: left;
   }
-  .page#values .body-wrap svg {
+  .page#values .body-wrap .lines {
+    display: block;
+    width: 70px;
     left: 0;
     top: -30px;
   }
@@ -1854,6 +1911,19 @@ body.page-home .staggered-image img {
   background: #5759BC;
   color: #DEE2DF;
 }
+.page#leadership .header-wrap {
+  margin-top: -20px;
+}
+.page#leadership .header-wrap .lines {
+  width: 30px;
+  position: relative;
+}
+.page#leadership .header-wrap .lines i:nth-child(n+4) {
+  display: none;
+}
+.page#leadership .header-wrap .lines.-two {
+  display: none;
+}
 .page#leadership .people .person h3 {
   margin: 28px 0 0;
 }
@@ -1863,10 +1933,17 @@ body.page-home .staggered-image img {
 .page#leadership .people .person h3.title {
   margin: 0 0 20px;
 }
-.page#leadership .people .person h3.title::after {
+.page#leadership .people .person.-thanks h3 {
+  margin-bottom: 20px;
+}
+.page#leadership .people .person .bio {
+  position: relative;
+  padding: 40px 0 20px;
+}
+.page#leadership .people .person .bio::before {
   content: "—";
-  display: block;
-  margin: 20px 0;
+  position: absolute;
+  top: 0;
   color: #FCAF17;
 }
 .page#leadership .people .person p {
@@ -1882,20 +1959,25 @@ body.page-home .staggered-image img {
 }
 @media screen and (min-width: 750px) {
   .page#leadership {
-    padding-top: 280px;
+    padding-top: 350px;
   }
-  .page#leadership svg {
+  .page#leadership .header-wrap .lines {
+    width: 70px;
     position: absolute;
-    top: -250px;
+    top: -290px;
     left: 0;
   }
-  .page#leadership svg.-bottom {
-    top: 120px;
+  .page#leadership .header-wrap .lines i:nth-child(n+4) {
+    display: block;
+  }
+  .page#leadership .header-wrap .lines.-two {
+    display: block;
+    top: 140px;
   }
   .page#leadership .people {
     display: flex;
     flex-flow: row wrap;
-    margin: -220px -10px 0;
+    margin: -220px 20% 0 -10px;
     padding: 0 0 0 20%;
   }
   .page#leadership .people .person {
@@ -1903,31 +1985,31 @@ body.page-home .staggered-image img {
     padding: 0 10px;
   }
   .page#leadership .people .person .bio {
-    padding: 0 10px 20px 0;
+    padding-right: 10px;
   }
 }
 
+.page#contact {
+  padding-top: 60px;
+}
 .page#contact h3 {
   color: #FC4F60;
 }
-.page#contact svg.offset {
+.page#contact .lines.-one {
+  top: 30px;
+  width: 30px;
   position: absolute;
   right: 50%;
   transform: translate(50vw, -60px);
 }
-.page#contact .svg-bottom-wrap {
-  padding-bottom: 200px;
+.page#contact .lines.-one i:nth-child(n+4) {
+  display: none;
 }
-.page#contact .svg-bottom-wrap svg {
-  position: absolute;
-  right: 0;
-  top: calc(100% - 120px);
+.page#contact .form-wrap {
+  padding-top: 20px;
 }
-@media screen and (min-width: 750px) {
-  .page#contact .svg-bottom-wrap svg {
-    width: 20%;
-    height: auto;
-  }
+.page#contact .form-wrap .lines {
+  display: none;
 }
 .page#contact .buttons {
   text-align: right;
@@ -1947,10 +2029,25 @@ body.page-home .staggered-image img {
   color: #fff;
 }
 @media screen and (min-width: 750px) {
-  .page#contact svg.offset {
+  .page#contact .lines.-one {
+    width: 70px;
     position: absolute;
     left: 50%;
+    top: auto;
     transform: translate(-50vw, -60px);
+  }
+  .page#contact .lines.-one i:nth-child(n+4) {
+    display: block;
+  }
+  .page#contact .form-wrap {
+    padding: 0 0 120px 20%;
+  }
+  .page#contact .form-wrap .lines {
+    display: block;
+    right: 0;
+    width: 180px;
+    position: absolute;
+    top: calc(100% - 80px);
   }
   .page#contact .body-wrap {
     width: 30%;

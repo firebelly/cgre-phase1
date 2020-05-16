@@ -4,18 +4,27 @@ footer {
   @include clearfix;
   background: color(darkgray);
   color: color(lightgray);
+  padding: grid(4) 0 grid(8);
 
   p {
     @include p3;
+    @extend %smooth;
     font-size: 14px;
   }
 
   h4.divot {
+    font-size: 12px;
     &::after {
       content: '—';
       font-weight: normal;
       display: block;
-      margin: grid(2) 0;
+      margin: grid(1) 0 grid(2);
+    }
+    @include media-md {
+      font-size: 21px;
+      &::after {
+        margin: grid(2) 0;
+      }
     }
   }
 
@@ -66,7 +75,18 @@ footer {
       font-weight: normal;
       vertical-align: bottom;
     }
-
+  }
+  .logo {
+    .divot {
+      display: block;
+      width: 46px;
+      height: 4px;
+      background: color(pink);
+      margin: grid(8) 0 grid(4);
+    }
+    .logo-stacked {
+      width: 121px;
+    }
   }
 
   // Desktop styles
@@ -74,19 +94,19 @@ footer {
     .logo {
       width: columns(8);
       float: left;
-
       .divot {
-        display: block;
         width: 80px;
         height: 10px;
-        background: color(pink);
         margin: grid(1) 0 grid(13);
+      }
+      .logo-stacked {
+        width: 180px;
       }
     }
 
     .block.contact {
       width: columns(2);
-      float: left;
+      float: right;
     }
 
     form {
