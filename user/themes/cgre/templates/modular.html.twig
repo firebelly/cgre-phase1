@@ -3,13 +3,13 @@
 {% block content %}
 
   {% block premoduleContent %}
-    {{ page.content }}
+    {{ page.content|raw }}
   {% endblock %}
 
   {% for module in page.collection() %}
       <section class="page" data-title="{{ module.title }}" id="{{ module.menu|lower|replace({' ':'-'}) }}">
         <div class="container">
-          {{ module.content }}
+          {{ module.content|raw }}
         </div>
       </section>
   {% endfor %}
