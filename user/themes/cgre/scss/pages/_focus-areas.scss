@@ -7,8 +7,11 @@
   h3 {
     color: color(yellow);
   }
+  p {
+    @extend %smooth;
+  }
   .header-wrap {
-    margin-top: grid(-3);
+    margin-top: grid(-2);
     .lines {
       width: 30px;
       position: relative;
@@ -52,6 +55,7 @@
           top: grid(-12);
         }
         .image-wrap {
+          float: left;
           width: columns(4);
           margin: grid(20) 0 0 columns(1);
         }
@@ -112,6 +116,7 @@
           float: right;
         }
         .image-wrap {
+          float: left;
           width: columns(4);
           margin: grid(18) columns(1) 0 columns(1);
         }
