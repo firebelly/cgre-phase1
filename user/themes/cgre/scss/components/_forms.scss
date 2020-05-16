@@ -55,6 +55,7 @@ form {
 
     @include p1;
     font-size: 16px;
+    line-height: 20px;
     background: none;
     border: 1px solid color(darkgray);
     border-radius: 0;
@@ -72,6 +73,7 @@ form {
     @include media-md {
       padding: 15px;
       font-size: 21px;
+      line-height: 30px;
       margin-bottom: grid(4);
       &.half {
         width: calc(50% - 12px);

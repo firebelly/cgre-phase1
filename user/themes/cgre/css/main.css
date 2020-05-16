@@ -1030,6 +1030,7 @@ form textarea {
   line-height: 30px;
   letter-spacing: -0.02em;
   font-size: 16px;
+  line-height: 20px;
   background: none;
   border: 1px solid #004450;
   border-radius: 0;
@@ -1065,6 +1066,7 @@ form input[type=email],
 form textarea {
     padding: 15px;
     font-size: 21px;
+    line-height: 30px;
     margin-bottom: 40px;
   }
   form input[type=text].half,
