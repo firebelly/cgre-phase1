@@ -49,10 +49,15 @@ form {
   input[type=text],
   input[type=email],
   textarea {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
     @include p1;
     font-size: 16px;
     background: none;
     border: 1px solid color(darkgray);
+    border-radius: 0;
     padding: 5px 10px;
     width: 100%;
     margin-bottom: grid(1);
