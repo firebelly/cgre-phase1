@@ -64,9 +64,13 @@ body.page-home {
       content: '—';
       display: block;
     }
+    font-size: 14px;
   }
 
   @include media-md {
+    h3.divot {
+      font-size: 18px;
+    }
     padding: grid(6) 0 grid(10);
   }
 }
