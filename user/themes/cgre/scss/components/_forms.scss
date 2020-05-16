@@ -10,8 +10,8 @@ form {
     margin: 0;
 
     @include media-md {
+      font-size: 21px;
       padding: 0 $global-padding 12px 0;
-      font-style: 21px;
     }
   }
 
@@ -61,7 +61,6 @@ form {
     padding: 5px 10px;
     width: 100%;
     margin-bottom: grid(1);
-    max-height: 220px;
 
     &:focus {
       outline: 0;

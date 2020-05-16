@@ -1,5 +1,6 @@
 import { disableBodyScroll, enableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock';
 import appState from '../util/appState';
+import autosize from 'autosize';
 
 let $body,
 		$window,
@@ -50,6 +51,12 @@ const common = {
         common.closeNav();
       }
     });
+
+    // Autosize contact textarea
+    let contactText = document.querySelector('#contact-form textarea');
+    if (contactText) {
+      autosize(contactText);
+    }
   },
 
   // Close main and any child nav elements

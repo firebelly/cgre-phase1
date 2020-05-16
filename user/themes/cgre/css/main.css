@@ -986,8 +986,8 @@ form label {
 }
 @media screen and (min-width: 750px) {
   form label {
+    font-size: 21px;
     padding: 0 24px 12px 0;
-    font-style: 21px;
   }
 }
 form fieldset {
@@ -1036,7 +1036,6 @@ form textarea {
   padding: 5px 10px;
   width: 100%;
   margin-bottom: 10px;
-  max-height: 220px;
 }
 form input[type=text]:focus,
 form input[type=email]:focus,
