@@ -3,7 +3,9 @@ title: 'Contact'
 contact_headline: more info coming in summer 2020. in the meantime, say hello.
 form:
     name: contact-form
-    action: /home
+    action: '/home'
+    template: form-messages
+    refresh_prevention: true
     fields:
         contact-fieldset:
             type: fieldset
@@ -12,7 +14,6 @@ form:
                 name:
                   id: name
                   label: Name
-                  classes: form-control form-control-half
                   autocomplete: on
                   type: text
                   validate:
@@ -20,7 +21,6 @@ form:
 
                 email:
                   id: email
-                  classes: form-control form-control-lg
                   label: Email
                   type: email
                   validate:
@@ -34,31 +34,22 @@ form:
                 name:
                   id: organization
                   label: Organization
-                  classes: form-control form-control-half
                   autocomplete: on
                   type: text
-                  validate:
-                    required: true
 
                 focus:
                   id: focus
-                  classes: form-control form-control-lg
                   label: Focus
                   placeholder: Select Focus...
                   type: select
                   size: long
-                  help: 'Testing help'
                   options:
                       national: 'National'
                       state: 'State Level'
                       both: 'Both'
 
-                  validate:
-                    required: true
-
         message:
           label: Message
-          classes: form-control form-control-lg
           size: long
           type: textarea
           validate:
@@ -67,21 +58,19 @@ form:
     buttons:
         - type: submit
           value: Submit
-          classes: btn btn-primary btn-block
 
     process:
         - email:
             from: "{{ config.plugins.email.from }}"
             to:
-              - "{{ config.plugins.email.from }}"
+              - "{{ config.plugins.email.to }}"
               - "{{ form.value.email }}"
-            subject: "[Feedback] {{ form.value.firstname|e }} {{ form.value.lastname|e }}"
+            subject: "CGRE contact from {{ form.value.name|e }}{{ form.value.organization ? ' - '~form.value.organization|e : '' }}"
             body: "{% include 'forms/data.html.twig' %}"
         - save:
-            fileprefix: feedback-
+            fileprefix: contact-
             dateformat: Ymd-His-u
             extension: txt
             body: "{% include 'forms/data.txt.twig' %}"
-        - message: Thank you for your feedback!
-        - display: thankyou
+        - message: Thank you for getting in touch!
 ---

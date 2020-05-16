@@ -19,9 +19,37 @@
     }
   }
 
-  // Lines below form
   .form-wrap {
     padding-top: grid(2);
+
+    // Form feedback
+    .notices {
+      border: none;
+      background: color(pink);
+      color: color(white);
+      padding: grid(3);
+      p {
+        text-align: center;
+        @include p1;
+        font-weight: bold;
+      }
+    }
+    form {
+      @include transition(max-height);
+      overflow: hidden;
+      max-height: 1500px;
+    }
+    &.-success {
+      form {
+        max-height: 0;
+      }
+    }
+    .form-response {
+      &.-active {
+        display: block;
+      }
+    }
+
     .lines {
       display: none;
     }
