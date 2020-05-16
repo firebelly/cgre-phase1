@@ -1,0 +1,22 @@
+enabled: true
+from: info@cgre.org
+from_name: CGRE
+to: info@cgre.org
+to_name: CGRE
+queue:
+  enabled: false
+  flush_frequency: '* * * * *'
+  flush_msg_limit: 10
+  flush_time_limit: 100
+mailer:
+  engine: sendmail
+  smtp:
+    server:
+    port: 465
+    encryption: ssl
+    user:
+    password:
+  sendmail:
+    bin: '/usr/sbin/sendmail -bs'
+content_type: text/html
+debug: false
