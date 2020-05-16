@@ -4,6 +4,23 @@
 
   background: color(purple);
   color: color(lightgray);
+  p {
+    @extend %smooth;
+  }
+
+  .header-wrap {
+    margin-top: grid(-2);
+    .lines {
+      width: 30px;
+      position: relative;
+      i:nth-child(n+4) {
+        display: none;
+      }
+      &.-two {
+        display: none;
+      }
+    }
+  }
 
   .people {
     .person {
@@ -14,12 +31,21 @@
         }
         &.title {
           margin: 0 0 grid(2);
-          &::after {
-            content: '—';
-            display: block;
-            margin: grid(2) 0;
-            color: color(yellow);
-          }
+        }
+      }
+      &.-thanks {
+        h3 {
+          margin-bottom: grid(2);
+        }
+      }
+      .bio {
+        position: relative;
+        padding: grid(4) 0 grid(2);
+        &::before {
+          content: '—';
+          position: absolute;
+          top: 0;
+          color: color(yellow);
         }
       }
       p {
@@ -30,27 +56,35 @@
   }
 
   @include media-md {
-    padding-top: grid(28);
+    padding-top: grid(35);
 
-    svg {
-      position: absolute;
-      top: grid(-25);
-      left: 0;
-    }
-    svg.-bottom {
-      top: grid(12);
+    .header-wrap {
+      .lines {
+        width: 70px;
+        position: absolute;
+        top: grid(-29);
+        left: 0;
+        i:nth-child(n+4) {
+          display: block;
+        }
+
+        &.-two {
+          display: block;
+          top: grid(14);
+        }
+      }
     }
 
     .people {
       display: flex;
       flex-flow: row wrap;
-      margin: grid(-22) #{-($gutter / 2)} 0;
+      margin: grid(-22) columns(2) 0 #{-($gutter / 2)};
       padding: 0 0 0 columns(2);
       .person {
         flex: 1 1 50%;
         padding: 0 $gutter / 2;
         .bio {
-          padding: 0 grid(1) grid(2) 0;
+          padding-right: grid(1);
         }
       }
     }
