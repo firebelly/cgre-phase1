@@ -56,5 +56,6 @@ config.codekit3
 node_modules
 
 # staging/production config overrides
+user/cgre-phase1.localhost
 user/cgre.firebelly.co
 user/cgre.org
