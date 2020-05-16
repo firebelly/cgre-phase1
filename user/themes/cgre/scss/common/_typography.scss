@@ -95,8 +95,9 @@ $font-sans-serif-alt: 'Central Avenue', serif;
   text-transform: uppercase;
   font-weight: bold;
   letter-spacing: 0.02em;
-  font-size: 14px;
+  font-size: 18px;
   line-height: 20px;
+  @extend %smooth;
 
   @include media-md {
     font-size: 18px;

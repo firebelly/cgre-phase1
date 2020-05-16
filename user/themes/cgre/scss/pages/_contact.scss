@@ -1,31 +1,29 @@
 // Contact
 
 .page#contact {
+  padding-top: grid(6);
 
   h3 {
     color: color(pink);
   }
 
-  // SVG along right edge
-  svg.offset {
+  // Lines along right edge on mobile
+  .lines.-one {
+    top: grid(3);
+    width: 30px;
     position: absolute;
     right: 50%;
     transform: translate(50vw, grid(-6));
+    i:nth-child(n+4) {
+      display: none;
+    }
   }
 
-  // SVG below form
-  .svg-bottom-wrap {
-    padding-bottom: grid(20);
-    svg {
-      position: absolute;
-      right: 0;
-      top: calc(100% - #{grid(12)});
-    }
-    @include media-md {
-      svg {
-        width: columns(2);
-        height: auto;
-      }
+  // Lines below form
+  .form-wrap {
+    padding-top: grid(2);
+    .lines {
+      display: none;
     }
   }
 
@@ -48,10 +46,27 @@
 
   @include media-md {
     // SVG along left edge
-    svg.offset {
+    .lines.-one {
+      width: 70px;
       position: absolute;
       left: 50%;
+      top: auto;
       transform: translate(-50vw, grid(-6));
+      i:nth-child(n+4) {
+        display: block;
+      }
+    }
+
+    // Lines below form
+    .form-wrap {
+      padding: 0 0 grid(12) columns(2);
+      .lines {
+        display: block;
+        right: 0;
+        width: 180px;
+        position: absolute;
+        top: calc(100% - #{grid(8)});
+      }
     }
 
     .body-wrap {
