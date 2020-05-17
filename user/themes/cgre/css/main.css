@@ -1580,14 +1580,14 @@ footer h4.divot::after {
     margin: 20px 0;
   }
 }
-footer a {
+footer p a {
   transition-duration: 0.2s;
   transition-property: all;
   transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
   padding-bottom: 3px;
   border-bottom: 1px solid transparent;
 }
-footer a:hover {
+footer p a:hover {
   border-bottom: 1px solid #FC4F60;
 }
 footer .privacy {

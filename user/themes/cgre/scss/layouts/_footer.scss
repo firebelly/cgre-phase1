@@ -28,7 +28,7 @@ footer {
     }
   }
 
-  a {
+  p a {
     @include transition(all);
     padding-bottom: 3px;
     border-bottom: 1px solid transparent;

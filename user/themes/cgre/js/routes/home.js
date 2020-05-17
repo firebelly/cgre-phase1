@@ -28,17 +28,19 @@ const home = {
     });
 
     // Logo click scrolls to top of page
-    document.querySelector('.header a.logo').addEventListener('click', e => {
-      e.preventDefault();
-      // Ignore click if already animating
-      if (!appState.isAnimating) {
-        // Set nav item to active state immediately
-        document.querySelectorAll('.nav-main a').forEach(el => { el.classList.remove('active'); })
-        appState.isAnimating = true;
-        zenscroll.toY(0, 500, () => {
-          appState.isAnimating = false;
-        });
-      }
+    document.querySelectorAll('.header a.logo,footer .logo-stacked a').forEach(el => {
+      el.addEventListener('click', e => {
+        e.preventDefault();
+        // Ignore click if already animating
+        if (!appState.isAnimating) {
+          // Set nav item to active state immediately
+          document.querySelectorAll('.nav-main a').forEach(el => { el.classList.remove('active'); })
+          appState.isAnimating = true;
+          zenscroll.toY(0, 500, () => {
+            appState.isAnimating = false;
+          });
+        }
+      });
     });
 
     // Contact submit button changes text on hover
