@@ -1073,6 +1073,9 @@ svg.icon {
   transition: transform 1.25s cubic-bezier(0.165, 0.84, 0.44, 1), opacity 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
   will-change: transform, opacity;
 }
+.-reveal.-delay {
+  transition: transform 2s cubic-bezier(0.165, 0.84, 0.44, 1), opacity 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
 @media screen and (min-width: 750px) {
   .-reveal {
     transform: translate3d(0, 30%, 0);
