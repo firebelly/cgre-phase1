@@ -943,7 +943,7 @@ svg.icon {
 }
 .lines i {
   display: block;
-  border-top: 1px solid #004450;
+  border-top: 1px solid #FC4F60;
   margin-bottom: 29px;
   opacity: 0;
   will-change: opacity;
@@ -959,9 +959,6 @@ svg.icon {
 }
 .lines.-yellow i {
   border-color: #FCAF17;
-}
-.lines.-pink i {
-  border-color: #FC4F60;
 }
 .lines.-lightgray i {
   border-color: #DEE2DF;

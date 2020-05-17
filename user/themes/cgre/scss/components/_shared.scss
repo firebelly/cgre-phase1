@@ -18,7 +18,7 @@
   }
   i {
     display: block;
-    border-top: 1px solid color(darkgray);
+    border-top: 1px solid color(pink);
     margin-bottom: 29px;
     opacity: 0;
     will-change: opacity;
@@ -34,9 +34,6 @@
   }
   &.-yellow i {
     border-color: color(yellow);
-  }
-  &.-pink i {
-    border-color: color(pink);
   }
   &.-lightgray i {
     border-color: color(lightgray);
