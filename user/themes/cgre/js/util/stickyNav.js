@@ -44,11 +44,11 @@ const stickyNav = {
   // Update positions of sticky nav
   update() {
     ticking = false;
-    if (navBottom <= scrollTop && !appState.navStuck) {
+    if (navBottom <= scrollTop + 40 && !appState.navStuck) {
       $body.addClass('nav-stuck');
       appState.navStuck = true;
     }
-    if (navBottom >= scrollTop && appState.navStuck) {
+    if (navBottom >= scrollTop + 40 && appState.navStuck) {
       $body.removeClass('nav-stuck');
       appState.navStuck = false;
     }

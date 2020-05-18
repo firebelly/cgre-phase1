@@ -549,6 +549,11 @@ figcaption {
   line-height: 20px;
   letter-spacing: 0.02em;
 }
+address em,
+p em,
+figcaption em {
+  font-style: italic;
+}
 
 .row:after {
   content: "";
@@ -1390,7 +1395,7 @@ body.nav-stuck .header .logo {
     transform: translateY(0);
   }
   body.nav-stuck .logo-full {
-    top: -50px;
+    top: -5px;
     transform: translateY(-20px);
   }
   body.nav-stuck .header {

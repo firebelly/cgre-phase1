@@ -194,4 +194,7 @@ address,
 p,
 figcaption {
   @include p2;
+  em {
+   font-style: italic;
+  }
 }
