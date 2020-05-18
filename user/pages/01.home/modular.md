@@ -1,7 +1,17 @@
 ---
-title: Home
+title: The Collaborative for Gender + Reproductive Equity
 body_classes: page-home home
 onpage_menu: true
+metadata:
+    generator: 'Grav'
+    description: 'The Collaborative for Gender + Reproductive Equity seeks to raise $100M annually in new funding to pursue select, transformational opportunities.'
+    author: 'Firebelly Design'
+    'og:title': The Collaborative for Gender + Reproductive Equity
+    'og:type': website
+    'og:url': https://cgre.org/
+    'twitter:card': summary
+    'twitter:title': The Collaborative for Gender + Reproductive Equity
+    'twitter:description': 'The Collaborative for Gender + Reproductive Equity seeks to raise $100M annually in new funding to pursue select, transformational opportunities.'
 content:
     items: '@self.modular'
     order:
