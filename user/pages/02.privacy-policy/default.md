@@ -1,5 +1,6 @@
 ---
-title: privacy policy
+title: Privacy Policy | CGRE
+display_title: privacy policy
 body_classes: page-privacy-policy page-static
 onpage_menu: false
 ---
