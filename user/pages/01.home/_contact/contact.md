@@ -7,7 +7,7 @@ form:
     template: form-messages
     refresh_prevention: true
     fields:
-        contact-fieldset:
+        namefieldset:
             type: fieldset
             classes: 'contact-info -two-column'
             fields:
@@ -27,11 +27,11 @@ form:
                     rule: email
                     required: true
 
-        org-fieldset:
+        orgfieldset:
             type: fieldset
             classes: 'org-info -two-column'
             fields:
-                name:
+                organization:
                   id: organization
                   label: Organization
                   autocomplete: on
