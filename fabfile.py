@@ -10,8 +10,8 @@ env.git_branch = 'master'
 env.warn_only = True
 
 def production():
-  env.hosts = ['cgre.com']
-  env.remotepath = '/home/firebelly/webapps/cgre'
+  env.hosts = ['cgre.org']
+  env.remotepath = '/home/firebelly/webapps/cgre_phase1_production'
   env.git_branch = 'master'
 
 def deploy(composer = 'y'):
