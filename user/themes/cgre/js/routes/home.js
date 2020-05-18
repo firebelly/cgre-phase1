@@ -10,20 +10,17 @@ const home = {
     document.querySelectorAll('.nav-main a').forEach(el => {
       el.addEventListener('click', e => {
         e.preventDefault();
-        // Ignore click if already animating
-        if (!appState.isAnimating) {
-          // Set nav item to active state immediately
-          document.querySelectorAll('.nav-main a').forEach(el => { el.classList.remove('active'); })
-          el.classList.add('active');
-          // Find matching page
-          let title = el.getAttribute('data-title');
-          let page = document.querySelector(`section.page[data-title="${title}"`);
-          // Set state to animating for various checks
-          appState.isAnimating = true;
-          zenscroll.intoView(page, 500, () => {
-            appState.isAnimating = false;
-          });
-        }
+        // Set nav item to active state immediately
+        document.querySelectorAll('.nav-main a').forEach(el => { el.classList.remove('active'); })
+        el.classList.add('active');
+        // Find matching page
+        let title = el.getAttribute('data-title');
+        let page = document.querySelector(`section.page[data-title="${title}"`);
+        // Set state to animating for various checks
+        appState.isAnimating = true;
+        zenscroll.intoView(page, 500, () => {
+          appState.isAnimating = false;
+        });
       });
     });
 
