@@ -10,6 +10,8 @@ pages:
   process:
     markdown: true
     twig: false
+  frontmatter:
+    process_twig: true
 
 cache:
   enabled: true
@@ -40,6 +42,7 @@ debugger:
   twig: true
   shutdown:
     close_connection: true
+
 gpm:
   releases: stable
   verify_peer: true

@@ -8,8 +8,10 @@ metadata:
     author: 'Firebelly Design'
     'og:title': The Collaborative for Gender + Reproductive Equity
     'og:type': website
-    'og:url': https://cgre.org/
+    'og:url': "{{ base_url_absolute }}"
+    'og:image': "{{ base_url_absolute ~ '/user/images/cgre-social-img.jpg'|raw }}"
     'twitter:card': summary
+    'twitter:image': "{{ base_url_absolute ~ '/user/images/cgre-social-img.jpg'|raw }}"
     'twitter:title': The Collaborative for Gender + Reproductive Equity
     'twitter:description': 'The Collaborative for Gender + Reproductive Equity seeks to raise $100M annually in new funding to pursue select, transformational opportunities.'
 content:
