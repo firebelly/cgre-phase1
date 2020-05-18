@@ -5,10 +5,11 @@
   padding: grid(2) 0;
 }
 
-// Decorative lines
+// Decorative lines (switched to HTML instead of SVGs)
 .lines {
   position: absolute;
   &.-reveal {
+    // Disable image reveal transitions for lines container
     opacity: 1;
     transform: none;
     transition: none;
@@ -16,6 +17,7 @@
       transform: none;
     }
   }
+  // Each <i> is a line
   i {
     display: block;
     border-top: 1px solid color(pink);
@@ -39,6 +41,7 @@
     border-color: color(lightgray);
   }
 
+  // Staggered reveal animation
   @for $i from 1 through 20 {
     i:nth-child(#{$i}) {
       animation-delay: #{0.5 + 0.05 *  $i}s;
@@ -78,40 +81,3 @@
   }
 }
 
-// Flash notices
-.flash {
-  padding: 10px;
-  // color: color(blue);
-  // background: color(white);
-  text-align: center;
-  padding: 20px 0;
-  margin: grid(4) 0;
-}
-
-// Color image treatment
-// .color-massage {
-//   display: inline-block;
-//   position: relative;
-//   img {
-//     display: block;
-//   }
-//   .hands {
-//     &::before,
-//     &::after {
-//       content: '';
-//       position: absolute;
-//       top: 0;
-//       left: 0;
-//       right: 0;
-//       bottom: 0;
-//     }
-//     &::before {
-//       background: #1A1A1A;
-//       mix-blend-mode: lighten;
-//     }
-//     &::after {
-//       background: rgba(235, 229, 208, 0.50);
-//       mix-blend-mode: multiply;
-//     }
-//   }
-// }

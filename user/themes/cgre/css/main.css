@@ -1087,13 +1087,6 @@ svg.icon {
   transform: translate3d(0, 0, 0);
 }
 
-.flash {
-  padding: 10px;
-  text-align: center;
-  padding: 20px 0;
-  margin: 40px 0;
-}
-
 form label {
   font-weight: normal;
   font-family: "Garnett", sans-serif;
