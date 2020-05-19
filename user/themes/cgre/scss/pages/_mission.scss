@@ -40,7 +40,7 @@
   }
 
   // Desktop styles
-  @include media-md {
+  @include media-nav {
     padding-top: grid(1);
 
     .lines.-one {

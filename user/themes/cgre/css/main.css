@@ -1804,7 +1804,7 @@ body.page-home .staggered-image img {
 .page#mission .body-wrap {
   margin-top: 20px;
 }
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 960px) {
   .page#mission {
     padding-top: 10px;
   }
