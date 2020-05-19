@@ -1863,6 +1863,10 @@ body.page-home .staggered-image img {
   }
   .page#focus-areas .header-wrap {
     width: 40%;
+    margin-top: 0;
+  }
+  .page#focus-areas .header-wrap .lines {
+    display: none;
   }
 }
 .page#focus-areas .focus-area:after {

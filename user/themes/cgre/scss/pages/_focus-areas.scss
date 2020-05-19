@@ -22,6 +22,10 @@
     padding-bottom: grid(25);
     .header-wrap {
       width: columns(4);
+      margin-top: 0;
+      .lines {
+        display: none;
+      }
     }
   }
 
