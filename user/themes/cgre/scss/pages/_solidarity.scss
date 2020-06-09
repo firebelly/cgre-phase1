@@ -1,0 +1,50 @@
+// Solidarity
+
+.page#solidarity {
+
+  background: color(yellow);
+
+  .header-wrap {
+    width: columns(7);
+    .divot {
+      margin: 0 0 grid(2);
+
+      @include media-md {
+        margin: grid(10) 0 grid(4);
+      }
+    }
+    h2 {
+      margin-top: 0;
+    }
+  }
+
+  .body-wrap {
+    margin-top: grid(2);
+    .button {
+      margin-top: grid(2);
+    }
+
+    @include media-md {
+      .button {
+        margin-top: grid(7);
+      }
+    }
+  }
+
+  // Desktop styles
+  @include media-nav {
+    padding-top: grid(1);
+
+    .header-wrap {
+      width: columns(5);
+    }
+
+    .body-wrap {
+      float: right;
+      width: columns(4);
+      margin-top: 0;
+    }
+
+  }
+
+}

@@ -891,27 +891,23 @@ svg.icon {
   line-height: 30px;
   font-size: 12px;
   display: inline-block;
-  text-align: center;
-  line-height: 1.4;
+  line-height: 1;
   margin: 0;
   padding: 15px 10px;
-  position: relative;
-  border: 1px solid #DCD3DE;
-  background: transparent;
-  color: #DCD3DE;
-  align-items: center;
   text-decoration: none;
-  line-height: 1;
+  width: 100%;
+  color: #004450;
+  border: 1px solid #004450;
+  text-align: left;
+  background: transparent url("/user/themes/cgre/images/arrow.svg") 83% 50% no-repeat;
   transition-duration: 0.2s;
-  transition-property: transform;
+  transition-property: background;
   transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
 }
 .button:hover {
+  background: #FC4F60 url("/user/themes/cgre/images/arrow-white.svg") 95% 50% no-repeat;
+  color: #fff;
   text-decoration: none;
-}
-.button:active {
-  box-shadow: 0 0 0 rgba(0, 0, 0, 0.25);
-  transform: translateY(1px);
 }
 .button svg {
   vertical-align: top;
@@ -1085,6 +1081,20 @@ svg.icon {
 .-reveal.-active {
   opacity: 1;
   transform: translate3d(0, 0, 0);
+}
+
+div.divot {
+  display: block;
+  width: 46px;
+  height: 4px;
+  background: #fff;
+  margin: 0px 0 20px;
+}
+@media screen and (min-width: 750px) {
+  div.divot {
+    width: 80px;
+    height: 10px;
+  }
 }
 
 form label {
@@ -1631,9 +1641,6 @@ footer form button.button {
   vertical-align: bottom;
 }
 footer .logo .divot {
-  display: block;
-  width: 46px;
-  height: 4px;
   background: #FC4F60;
   margin: 80px 0 40px;
 }
@@ -1649,8 +1656,6 @@ footer .logo .logo-stacked {
     float: left;
   }
   footer .logo .divot {
-    width: 80px;
-    height: 10px;
     margin: 10px 0 130px;
   }
   footer .logo .logo-stacked {
@@ -1669,6 +1674,42 @@ footer .logo .logo-stacked {
   footer .block.newsletter {
     width: 40%;
     float: right;
+  }
+}
+
+.page-static h1.divot {
+  margin-bottom: 40px;
+}
+.page-static h1.divot::before {
+  content: "";
+  display: block;
+  width: 46px;
+  height: 4px;
+  background: #FC4F60;
+  margin: 40px 0 40px;
+}
+.page-static .body-wrap {
+  max-width: 675px;
+}
+.page-static #body .container {
+  padding-top: 40px;
+  padding-bottom: 100px;
+}
+@media screen and (min-width: 750px) {
+  .page-static #body .container {
+    padding-top: 40px;
+    padding-bottom: 100px;
+  }
+  .page-static h1.divot {
+    margin-bottom: 80px;
+  }
+  .page-static h1.divot::before {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 10px;
+    background: #FC4F60;
+    margin: 10px 0 60px;
   }
 }
 
@@ -1843,6 +1884,48 @@ body.page-home .staggered-image img {
   }
 }
 
+.page#solidarity {
+  background: #FCAF17;
+}
+.page#solidarity .header-wrap {
+  width: 70%;
+}
+.page#solidarity .header-wrap .divot {
+  margin: 0 0 20px;
+}
+@media screen and (min-width: 750px) {
+  .page#solidarity .header-wrap .divot {
+    margin: 100px 0 40px;
+  }
+}
+.page#solidarity .header-wrap h2 {
+  margin-top: 0;
+}
+.page#solidarity .body-wrap {
+  margin-top: 20px;
+}
+.page#solidarity .body-wrap .button {
+  margin-top: 20px;
+}
+@media screen and (min-width: 750px) {
+  .page#solidarity .body-wrap .button {
+    margin-top: 70px;
+  }
+}
+@media screen and (min-width: 960px) {
+  .page#solidarity {
+    padding-top: 10px;
+  }
+  .page#solidarity .header-wrap {
+    width: 50%;
+  }
+  .page#solidarity .body-wrap {
+    float: right;
+    width: 40%;
+    margin-top: 0;
+  }
+}
+
 .page#focus-areas {
   background: #004450;
   color: #DEE2DF;
@@ -2011,39 +2094,6 @@ body.page-home .staggered-image img {
     width: 70px;
     left: 0;
     top: -30px;
-  }
-}
-
-.page-privacy-policy h1.divot {
-  margin-bottom: 40px;
-}
-.page-privacy-policy h1.divot::before {
-  content: "";
-  display: block;
-  width: 46px;
-  height: 4px;
-  background: #FC4F60;
-  margin: 40px 0 40px;
-}
-.page-privacy-policy #body .container {
-  padding-top: 40px;
-  padding-bottom: 100px;
-}
-@media screen and (min-width: 750px) {
-  .page-privacy-policy #body .container {
-    padding-top: 40px;
-    padding-bottom: 100px;
-  }
-  .page-privacy-policy h1.divot {
-    margin-bottom: 80px;
-  }
-  .page-privacy-policy h1.divot::before {
-    content: "";
-    display: block;
-    width: 80px;
-    height: 10px;
-    background: #FC4F60;
-    margin: 10px 0 60px;
   }
 }
 

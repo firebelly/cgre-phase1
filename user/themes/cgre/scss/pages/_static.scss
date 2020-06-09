@@ -1,7 +1,6 @@
-// Privacy Policy
+// Static pages (/privacy, /solidarity)
 
-
-.page-privacy-policy {
+.page-static {
 
   h1.divot {
     margin-bottom: grid(4);
@@ -13,6 +12,11 @@
       background: color(pink);
       margin: grid(4) 0 grid(4);
     }
+  }
+
+  .body-wrap {
+    // Keep text readable with ~70-80 chars per line
+    max-width: 675px;
   }
 
   #body .container {

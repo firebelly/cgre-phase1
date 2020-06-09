@@ -21,6 +21,7 @@ content:
         dir: asc
         custom:
             - _mission
+            - _solidarity
             - _focus-areas
             - _values
             - _leadership

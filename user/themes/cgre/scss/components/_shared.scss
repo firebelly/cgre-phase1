@@ -81,3 +81,16 @@
   }
 }
 
+// Standalone boxy accent divots (footer, solidarity)
+div.divot {
+  display: block;
+  width: 46px;
+  height: 4px;
+  background: color(white);
+  margin: grid(0) 0 grid(2);
+
+  @include media-md {
+    width: 80px;
+    height: 10px;
+  }
+}

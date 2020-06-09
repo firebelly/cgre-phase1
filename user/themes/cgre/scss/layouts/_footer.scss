@@ -78,9 +78,6 @@ footer {
   }
   .logo {
     .divot {
-      display: block;
-      width: 46px;
-      height: 4px;
       background: color(pink);
       margin: grid(8) 0 grid(4);
     }
@@ -95,8 +92,6 @@ footer {
       width: columns(8);
       float: left;
       .divot {
-        width: 80px;
-        height: 10px;
         margin: grid(1) 0 grid(13);
       }
       .logo-stacked {
