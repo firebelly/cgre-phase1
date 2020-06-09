@@ -1,6 +1,6 @@
 ---
 title: Solidarity Statement | CGRE
-display_title: cgre solidarity statement
+display_title: CGRE solidarity statement
 body_classes: page-solidarity page-static
 onpage_menu: false
 ---
