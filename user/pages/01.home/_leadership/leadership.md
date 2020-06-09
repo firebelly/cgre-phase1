@@ -30,4 +30,4 @@ people:
 
 ### Special thanks to consultants
 
-Susan Bell and Associates, Firebelly Design, Rebecca Nichols, Redstone Strategy Group, Marisha Wignaraja and many others who have made this work possible.
+Susan Bell & Associates, Firebelly Design, Rebecca Nichols, Redstone Strategy Group, Marisha Wignaraja and many others who have made this work possible.
