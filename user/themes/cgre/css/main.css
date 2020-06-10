@@ -2185,6 +2185,20 @@ body.page-home .staggered-image img {
 .page#contact h3 {
   color: #FC4F60;
 }
+.page#contact .notices a {
+  background-image: linear-gradient(to bottom, #FCAF17 0%, #FCAF17 100%);
+  background-repeat: repeat-x;
+  background-position: 0% 100%;
+  background-size: 0px 0px;
+  text-decoration: underline;
+  transition-duration: 0.2s;
+  transition-property: background-size;
+  transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
+}
+.page#contact .notices a:hover, .page#contact .notices a:focus {
+  background-size: 100% 100%;
+  transition-delay: 0s;
+}
 .page#contact .lines.-one {
   top: 30px;
   width: 30px;
@@ -2249,10 +2263,10 @@ body.page-home .staggered-image img {
   overflow: hidden;
   max-height: 1500px;
 }
-.page#contact .form-wrap.-success {
+.page#contact .form-wrap.-error, .page#contact .form-wrap.-success {
   padding-top: 0;
 }
-.page#contact .form-wrap.-success form {
+.page#contact .form-wrap.-error form, .page#contact .form-wrap.-success form {
   max-height: 0;
 }
 .page#contact .form-wrap .form-response.-active {

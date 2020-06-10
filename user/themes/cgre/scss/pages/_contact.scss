@@ -7,6 +7,10 @@
     color: color(pink);
   }
 
+  .notices a {
+    @include inline-link;
+  }
+
   // Lines along right edge on mobile
   .lines.-one {
     top: grid(3);
@@ -58,6 +62,7 @@
       overflow: hidden;
       max-height: 1500px;
     }
+    &.-error,
     &.-success {
       padding-top: 0;
       form {

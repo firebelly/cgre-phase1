@@ -1,0 +1,23 @@
+name: Akismet
+version: 0.1.1
+description: Adds an Akismet check to forms and stops propagation if Askismet detects spam
+icon: plug
+author:
+  name: Firebelly Design
+  email: developer@firebellydesign.com
+keywords: grav, plugin, akismet, spam, forms
+license: MIT
+
+form:
+  validation: strict
+  fields:
+    enabled:
+      type: toggle
+      label: Plugin status
+      highlight: 1
+      default: 0
+      options:
+        1: Enabled
+        0: Disabled
+      validate:
+        type: bool

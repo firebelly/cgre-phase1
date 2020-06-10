@@ -9,7 +9,11 @@
 </div>
 
 <div class="form-wrap">
-  <div class="form-response"></div>
+  <div class="form-response">
+  	{% if form.message %}
+	  	{{ form.message }}
+  	{% endif %}
+  </div>
   {% include "forms/form.html.twig" %}
 
   <div class="lines -large" aria-hidden="true">

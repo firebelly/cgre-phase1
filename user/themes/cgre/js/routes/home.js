@@ -6,6 +6,15 @@ const home = {
   init() {
     // JavaScript to be fired on the homepage
 
+    // Reload links (from failed contact msg)
+    document.addEventListener('click', e => {
+      if (e.target.matches('a.reload')) {
+        e.preventDefault();
+        location.href = e.target.href;
+        location.reload();
+      }
+    });
+
     // Nav links scroll to page containers
     document.querySelectorAll('.nav-main a').forEach(el => {
       el.addEventListener('click', e => {
@@ -69,11 +78,14 @@ const home = {
           formResponse.innerHTML = result;
           if (result.match('success')) {
             formWrap.classList.add('-success');
+          } else {
+            formWrap.classList.add('-error');
           }
           zenscroll.center(formResponse);
         },
         error: (result) => {
-          formResponse.innerHTML = '<p>There was an error, please try again.</p>';
+          formResponse.innerHTML = '<div class="notices error red"><p>There was an error, please <a class="reload" href="/#contact">try again</a>.</p></div>';
+          formWrap.classList.add('-error');
           zenscroll.center(formResponse);
         }
       });

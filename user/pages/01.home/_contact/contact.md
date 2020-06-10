@@ -55,11 +55,24 @@ form:
           validate:
             required: true
 
+        diebots5000:
+          type: honeypot
+
+        nectarConfirmation:
+          type: honeypot
+
     buttons:
         - type: submit
           value: Submit
 
     process:
+        - akismet:
+            name: '{{ form.value.name }}'
+            email: '{{ form.value.email }}'
+            organization: '{{ form.value.organization }}'
+            message: '{{ form.value.message }}'
+            botherDev: nate@firebellydesign.com
+            failureMessage: 'Your contact was flagged as spam. Please <a href="mailto:info@cgre.org">email us</a> or <a class="reload" href="/#contact">try again</a> if you feel this is in error.'
         - email:
             from: "{{ config.plugins.email.from }}"
             to:
